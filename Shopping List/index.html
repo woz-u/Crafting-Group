@@ -1,5 +1,84 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title> Shopping List </title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <br />
+
+  <body>
+    <h1 class="center"> Shopping List </h1>
+    <br />
+
+    <div class="container">
+      <form id="shopping">
+
+        <label for="shopping">Add an item</label>
+        <input type="text" name="shopping" class="shopping" placeholder="e.g., broccoli"> <br>
+
+        <label for="shopping"class="shopping"> Type </label>
+        <select>
+          <option value="Vegetables">Vegetables</option>
+          <option value="Fruits">Fruits</option>
+          <option value="Grains">Grains</option>
+          <option value="Canned Goods">Canned Goods</option>
+          <option value="Snacks">Snacks</option>
+          <option value="Beverages">Beverages</option>
+          <option value="Meat">Meat</option>
+          <option value="Dairy">Dairy</option>
+          <option value="Frozen">Frozen</option>
+          <option value="Household">Household</option>
+        </select><br>
+
+        <label for="shopping"> Store </label>
+        <input type="text" name="store" class="shopping"><br>
+
+        <label for="shopping"> Quantity </label>
+        <input type="number" name="quantity" class="shopping"><br>
+
+        <label for="shopping"> Price </label>
+        <input type="number" name="price" class="shopping"><br>
+
+        <label for="shopping"> Total Price <label>
+        <input type="number" name="totalPrice" class="shopping"><br>
+        <br>
+
+        <label for="shopping" name="purchased" class="shopping"> Purchased <label>
+        <br>
+
+        <input type="checkbox"  />
+        <label for="yes"> Yes </label>
+        <input type="checkbox" id="no" value="no" />
+        <label for="no"> No </label> <br>
+
+        <br>
+
+        <button class="button"> <h1> Save List </h1></button>
+
+      </form>
+    </div><br>
+
+
+    <div class="center">
+      <h2>Notes</h2><br>
+      <textarea
+        class="center"
+        rows="10"
+        cols="50"
+        name="notes"
+        placeholder="Write Any Notes Here"
+      ></textarea>
+    </div>
+    <br />
+
+  
+     
+
+    <script src="script.js"></script>
+  </body>
+</html>
+=======
 	<head>
 		<title> Shopping List </title>
 		<link rel="stylesheet" href="style.css" />
@@ -88,3 +167,4 @@
 	</body>
 
 </html>
+
