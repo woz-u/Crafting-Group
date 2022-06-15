@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore"; //add
 
 // App's Firebase configuration from settings
 const firebaseConfig = {
-  apiKey: "AIzaSyDRVhGt_KxRfNnMrt0J3KMA0lGXJcHZcMo",
-  authDomain: "task-manager-f109d.firebaseapp.com",
-  projectId: "task-manager-f109d",
-  storageBucket: "task-manager-f109d.appspot.com",
-  messagingSenderId: "312667133109",
-  appId: "1:312667133109:web:a4ffa96b0549f6469adafc"
+  apiKey: "AIzaSyCIyZnXpjje_FIiztLI03zXysgBP8A0G0c",
+  authDomain: "crafting-pm.firebaseapp.com",
+  projectId: "crafting-pm",
+  storageBucket: "crafting-pm.appspot.com",
+  messagingSenderId: "858385904193",
+  appId: "1:858385904193:web:f7d2acd04ddc8d1246ccc0"
 };
 
 // Initialize Firebase
