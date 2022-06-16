@@ -7,6 +7,7 @@ import { getFirestore } from "firebase/firestore"; //add
 
 // App's Firebase configuration from settings
 const firebaseConfig = {
+
   apiKey: "AIzaSyCIyZnXpjje_FIiztLI03zXysgBP8A0G0c",
   authDomain: "crafting-pm.firebaseapp.com",
   projectId: "crafting-pm",
