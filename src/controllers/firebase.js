@@ -1,19 +1,18 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "/firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use  https://firebase.google.com/docs/web/setup#available-libraries
-import { getFirestore, collection, getDocs } from '/firebase/firestore/lite';
+import { getFirestore, collection, getDocs } from '/firebase/firestore';
 
-// import { getAuth, signInWithPopup, GoogleAuthProvider } from "/firebase/auth";
-// import { getFirestore } from "/firebase/firestore";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "/firebase/auth";
 
 // Your web app's Firebase configuration for Crafters PM
 const firebaseConfig = {
-  apiKey: "AIzaSyDKrwvJZc8yt1OWuS992xO1dNAiGuaNsh0",
-  authDomain: "crafters-pm.firebaseapp.com",
-  projectId: "crafters-pm",
-  storageBucket: "crafters-pm.appspot.com",
-  messagingSenderId: "1096507400942",
-  appId: "1:1096507400942:web:9010c10809725443ad49ff"
+  apiKey: "AIzaSyCIyZnXpjje_FIiztLI03zXysgBP8A0G0c",
+  authDomain: "crafting-pm.firebaseapp.com",
+  projectId: "crafting-pm",
+  storageBucket: "crafting-pm.appspot.com",
+  messagingSenderId: "858385904193",
+  appId: "1:858385904193:web:f7d2acd04ddc8d1246ccc0"
 };
 // Initialize Cloud Firestore and get a reference to the service
 const db = getFirestore(app);
