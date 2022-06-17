@@ -81,3 +81,93 @@
     <script src="script.js"></script>
   </body>
 </html>
+=======
+	<head>
+		<title> Shopping List </title>
+		<link rel="stylesheet" href="style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head> <br>
+
+	<body>
+
+		<!-- Naviagtion Bootstrap -->
+		<p>
+			<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
+				aria-expanded="true" aria-controls="collapseWidthExample">
+				Menu Options
+			</button>
+		
+			<div style="min-height: 120px;">
+				<div class="collapse-horizontal collapse show" id="collapseWidthExample">
+					<div class="card card-body" style="width: 300px;">
+						<!-- Drop down list -->
+						<!-- Home Button -->
+						<a href="home.html" class="list-group-item list-group-item-action">
+							Home
+						</a>
+			
+						<!-- Dashboard Button-->
+						<a href="content\dashboard.html" class="list-group-item list-group-item-action">
+							Dashboard
+						</a>
+			
+						<!--Orders Button-->
+						<a href="Shopping List\index.html" class="list-group-item list-group-item-action">
+							Orders
+						</a>
+			
+						<!-- Project Ideas -->
+						<a href="content\project.html" class="list-group-item list-group-item-action">
+							Projects
+						</a>
+						<!-- Dropdown -->
+					</div>
+				</div>
+			</div>
+		</p>
+		<!--- End of Navigation -->
+
+		<h1 class="center"> Shopping List </h1><br>
+
+		<table class="center">
+			<thead>
+			<tr>
+			<th>Name</th>
+			<th>Quantity</th>
+			<th>Price</th>
+			<th>Total</th>
+			<th>Store</th>
+			<th>Store Link</th>
+			<th> Purchased </th>
+			</tr>
+			</thead>
+<!--Links in Project Name to tie the supply to a project-->
+			<tbody>
+				<tr>
+					<td> Wicks </td>
+					<td> 10 </td>
+					<td> $1 </td>
+					<td> $10 </td>
+					<td> Amazon </td>
+					<td> http:// </td>
+					<td>
+						<input type="checkbox" id="yes" value="yes">
+						<label for ="yes"> Yes </label>
+						<input type="checkbox" id="no" value="no">
+						<label for ="no"> No </label>
+					</td>
+				</tr>
+				</tbody>
+		</table>
+		<br>
+
+		<div class="center">
+			<h2> Notes </h2>
+			<textarea class="center" rows="10" cols="50" name="notes" placeholder="Write Any Notes Here"></textarea>
+		</div> <br>
+
+		<script src="script.js"></script>
+	</body>
+
+</html>
+
