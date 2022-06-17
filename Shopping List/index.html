@@ -15,7 +15,8 @@
       <form id="shopping">
 
         <label for="shopping">Add an item</label>
-        <input type="text" name="shopping" class="shopping" placeholder="e.g., broccoli"> <br>
+        <input type="text" name="shopping" class="shopping"  placeholder="e.g., broccoli" required> <br>
+        <br>
 
         <label for="shopping"class="shopping"> Type </label>
         <select>
@@ -29,16 +30,16 @@
           <option value="Dairy">Dairy</option>
           <option value="Frozen">Frozen</option>
           <option value="Household">Household</option>
-        </select><br>
+        </select><br>  <br>
 
         <label for="shopping"> Store </label>
-        <input type="text" name="store" class="shopping"><br>
+        <input type="text" name="store" class="shopping"><br><br>
 
         <label for="shopping"> Quantity </label>
-        <input type="number" name="quantity" class="shopping"><br>
+        <input type="number" name="quantity" class="shopping" required><br><br>
 
         <label for="shopping"> Price </label>
-        <input type="number" name="price" class="shopping"><br>
+        <input type="number" name="price" class="shopping" required><br><br>
 
         <label for="shopping"> Total Price <label>
         <input type="number" name="totalPrice" class="shopping"><br>
@@ -52,25 +53,27 @@
         <input type="checkbox" id="no" value="no" />
         <label for="no"> No </label> <br>
 
-        <br>
+        <br><br>
 
-        <button class="button"> <h1> Save List </h1></button>
+        
+        <div class="center">
+          <h2>Notes</h2><br>
+          <textarea
+            class="center"
+            rows="10"
+            cols="50"
+            name="notes"
+            placeholder="Write Any Notes Here"
+          ></textarea>
+        </div>
+        <br/>
+
+        <button class="button" name="submit" type="submit" onclick="alert('Your list is saved')"> <h1> Save List </h1></button>
 
       </form>
     </div><br>
 
 
-    <div class="center">
-      <h2>Notes</h2><br>
-      <textarea
-        class="center"
-        rows="10"
-        cols="50"
-        name="notes"
-        placeholder="Write Any Notes Here"
-      ></textarea>
-    </div>
-    <br />
 
   
      

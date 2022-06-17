@@ -13,6 +13,7 @@
 	text-align: center;
 	margin-left: auto;
   	margin-right: auto;
+	font-size: 25px  ;
   }
 
   body {
@@ -22,7 +23,7 @@
 	text-align: left;
 	justify-content: left;
 	text-align: left;
-	font-size: 25px;
+	font-size: 30px;
 	border: 10px, groove, black;
 	margin: 80px;
 	padding: 10px;
@@ -33,4 +34,5 @@
 	padding: 0;
 	margin: 0;
 	font-family: 'Times New Roman', Times, serif;
+	font-size: 30px;
   }
