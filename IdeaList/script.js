@@ -15,3 +15,9 @@ function increaseCount(a, b) {
 	  input.value = value;
 	}
   }
+
+//   function AddMore(){
+// 	var repetFrom = $("#button").find(".button").first().clone();
+//             repetFrom.appendTo($("#button"));
+//         }
+  

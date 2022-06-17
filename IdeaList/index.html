@@ -27,8 +27,50 @@
 		 	 </select> <br>
   <!--Category? Tags?-->
 	</form> <br>
+<!--Form idea #2-->
+<form method="POST">
+	<table class="horizontal">
+		<tr>
+			<td class="center">
+			<h2 class="center"> Materials Needed </h2>
 
-<h2 class="center">Materials Needed </h2>
+			<table class="form">
+				<tr>
+					<th> Quantity</th>
+					<td>
+						<div class="counter">
+							<span class="down" onClick='decreaseCount(event, this)'>-</span>
+							<input type="text" value="1">
+							<span class="up" onClick='increaseCount(event, this)'>+</span>
+						</div>
+					</td><br>
+				</tr>
+				<tr>
+					<th> Cost </th>
+					<td>
+						<input type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="$1">
+						</form>
+					<br>
+					</td>
+				</tr><br>
+				<br>
+
+				<tr>
+					<th>Notes</th>
+					<td>
+						<div class="center">
+							<textarea class="center" rows="10" cols="50" name="notes" placeholder="Write Any Notes Here"></textarea>
+							</div> <br>
+							
+							<div class="center">
+								<button class="save"> Save and Submit </button>
+								<button class="cancel"> Cancel </button>
+								<button id="button" onclick="AddMore()" type="button" value="add more"> Add an Entry <button></button>
+							</div>
+					</td>
+				</tr>
+		</tr>
+
 <ol bold id="materialsNeeded" class="materialsNeeded"><br>
 <!--Repeatable data entry form. Enter item, cost, qty add to list with running total of cost*qty=result and sum of result similar to a ToDo list function Horizontal layout -->
   <ul class="center"> Item 1 </ul> <br>
@@ -100,9 +142,12 @@
 </div> <br>
 
 <div class="center">
-	<button class="btn btn-success btn-lg"> Submit </button>
+	<button class="btn btn-success btn-lg"> Save and Submit </button>
 	<button class="btn btn-success btn-lg"> Cancel </button>
+	<button class="btn btn-success btn-lg" id="Button" onclick="AddMore()" type="button" value="add more"> Add an Entry <button></button>
 </div>
+
+</form>
 
 <script src="script.js"></script>
 
