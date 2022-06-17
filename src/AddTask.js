@@ -16,7 +16,7 @@ function AddTask({onClose, open}) {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await addDoc(collection(db, 'tasks'), {
+      await addDoc(collection(db, 'tasks'), { //shopping, project, stash
         title: title,
         description: description,
         completed: false,
@@ -29,7 +29,7 @@ function AddTask({onClose, open}) {
   }
 //change add task and form ensure the handleSubmit is part of the form tag
   return (
-    <Modal modalLable='Add Task' onClose={onClose} open={open}>
+    <Modal modalLabel='Add Task' onClose={onClose} open={open}>
       <form onSubmit={handleSubmit} className='addTask' name='addTask'>
         <input 
           type='text' 
