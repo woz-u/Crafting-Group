@@ -1,8 +1,8 @@
 // 2 add items modal page
 import Modal from "./Modal"
 import {useState} from 'react'
-import './all.css'
-import {db} from './firebase'
+import 'css/all.css'
+import {db} from '.controllers/firebase'
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
 //import the functions needed
 function AddTask({onClose, open}) {
