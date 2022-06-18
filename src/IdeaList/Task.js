@@ -1,5 +1,4 @@
-// 5 updates a task item including checkboxes with onChange and with handleCheckedChange also deletes items
-import './all.css'
+import './task.css'
 import {useState} from 'react'
 import TaskItem from './TaskItem'
 import EditTask from './EditTask'

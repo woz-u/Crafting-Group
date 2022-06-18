@@ -1,5 +1,5 @@
 import Modal from "./Modal"
-import './all.css'
+import './taskItem.css'
 
 function TaskItem({onClose, open, title, description}) {
 

@@ -1,7 +1,6 @@
-// 4 this updates the entry chosen from the list
 import Modal from "./Modal"
 import {useState} from 'react'
-import './all.css'
+import './editTask.css'
 import { doc, updateDoc } from "firebase/firestore";
 import {db} from './firebase'
 
@@ -25,7 +24,7 @@ function EditTask({open, onClose, toEditTitle, toEditDescription, id}) {
     }
     
   }
-//the modal for updates should this have all fields? 
+
   return (
     <Modal modalLable='Edit Task' onClose={onClose} open={open}>
       <form onSubmit={handleUpdate} className='editTask'>

@@ -1,4 +1,4 @@
-import './all.css'
+import './modal.css'
 
 function Modal({open, modalLable, children, custom_modal, onClose}) {
 

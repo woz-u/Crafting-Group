@@ -1,11 +1,9 @@
-// 3 this is the Read part of the app that also updates real time using snapshot
-import './all.css'
-import Task from './Task' //Task.js
+import './taskManager.css'
+import Task from './Task'
 import {useState, useEffect} from 'react'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
-import {db} from './firebase' //firebase.js
-//import the add function
-import AddTask from './AddTask' //AddTask.js
+import {db} from './firebase'
+import AddTask from './AddTask'
 
 function TaskManager() {
 
