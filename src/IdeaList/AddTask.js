@@ -36,7 +36,7 @@ function AddTask({onClose, open}) {
           placeholder='Enter title'/>
         <textarea 
           onChange={(e) => setDescription(e.target.value)}
-          placeholder='Enter task decription'
+          placeholder='Enter task description'
           value={description}></textarea>
         <button type='submit'>Done</button>
       </form> 
