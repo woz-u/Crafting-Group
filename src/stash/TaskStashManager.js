@@ -1,20 +1,20 @@
-import './taskManager.css'
-import Task from './Task'
+import './taskStashManager.css'
+import TaskStash from './TaskStash'
 import {useState, useEffect} from 'react'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
-import {db} from './firebase'
-import AddTask from './AddTask'
+import {db} from './controllers/firebase' // original code'./firebase' file path src\controllers\firebase.js
+import AddTaskStash from './AddStashTask'
 
-function TaskManager() {
+function TaskStashManager() {
 
-  const [openAddModal, setOpenAddModal] = useState(false)
-  const [tasks, setTasks] = useState([])
+  const [openAddStashModal, setOpenAddStashModal] = useState(false)
+  const [tasksStash, setTasksStash] = useState([])
 
   /* function to get all tasks from firestore in realtime */ 
   useEffect(() => {
-    const taskColRef = query(collection(db, 'tasks'), orderBy('created', 'desc'))
+    const taskColRef = query(collection(db, 'tasksStash'), orderBy('createdStash', 'descStash'))
     onSnapshot(taskColRef, (snapshot) => {
-      setTasks(snapshot.docs.map(doc => ({
+      setTasksStash(snapshot.docs.map(doc => ({
         id: doc.id,
         data: doc.data()
       })))
@@ -22,34 +22,34 @@ function TaskManager() {
   },[])
 
   return (
-    <div className='taskManager'>
-      <header>Task Manager</header>
-      <div className='taskManager__container'>
+    <div className='taskStashManager'>
+      <header>Task Stash Manager</header>
+      <div className='taskStashManager__container'>
         <button 
-          onClick={() => setOpenAddModal(true)}>
+          onClick={() => setOpenAddStashModal(true)}>
           Add task +
         </button>
-        <div className='taskManager__tasks'>
+        <div className='taskManagerStash__tasks'>
 
-          {tasks.map((task) => (
-            <Task
-              id={task.id}
-              key={task.id}
-              completed={task.data.completed}
-              title={task.data.title} 
-              description={task.data.description}
+          {tasksStash.map((taskStash) => (
+            <TaskStash
+              id={taskStash.id}
+              key={taskStash.id}
+              completed={taskStash.data.completed}
+              title={taskStash.data.title} 
+              description={taskStash.data.description}
             />
           ))}
 
         </div>
       </div>
 
-      {openAddModal &&
-        <AddTask onClose={() => setOpenAddModal(false)} open={openAddModal}/>
+      {openAddStashModal &&
+        <AddTaskStash onClose={() => setOpenAddStashModal(false)} open={openAddStashModal}/>
       }
 
     </div>
   )
 }
 
-export default TaskManager
+export default TaskStashManager
