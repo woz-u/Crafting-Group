@@ -1,13 +1,13 @@
-import './task.css'
+import './taskStash.css'
 import {useState} from 'react'
-import TaskItem from './TaskItem'
-import EditTask from './EditTask'
+import TaskItem from './TaskStashItem'
+import EditTask from './EditStashTask'
 import { doc, updateDoc, deleteDoc} from "firebase/firestore";
-import {db} from './firebase'
+import {db} from './controllers/firebase' // original code'./firebase' file path src\controllers\firebase.js
 
-function Task({id, title, description, completed}) {
+function TaskStash({id, titleStash, descriptionStash, completedStash}) {
 
-  const [checked, setChecked] = useState(completed)
+  const [checked, setCheckedStash] = useState(completedStash)
   const [open, setOpen] = useState({edit:false, view:false})
 
   const handleClose = () => {
@@ -49,11 +49,11 @@ function Task({id, title, description, completed}) {
         <label 
           htmlFor={`checkbox-${id}`} 
           className="checkbox-custom-label" 
-          onClick={() => setChecked(!checked)} ></label>
+          onClick={() => setCheckedStash(!checked)} ></label>
       </div>
       <div className='task__body'>
-        <h2>{title}</h2>
-        <p>{description}</p>
+        <h2>{titleStash}</h2>
+        <p>{descriptionStash}</p>
         <div className='task__buttons'>
           <div className='task__deleteNedit'>
             <button 
@@ -73,16 +73,16 @@ function Task({id, title, description, completed}) {
       {open.view &&
         <TaskItem 
           onClose={handleClose} 
-          title={title} 
-          description={description} 
+          title={titleStash} 
+          description={descriptionStash} 
           open={open.view} />
       }
 
       {open.edit &&
         <EditTask 
           onClose={handleClose} 
-          toEditTitle={title} 
-          toEditDescription={description} 
+          toEditTitle={titleStash} 
+          toEditDescription={descriptionStash} 
           open={open.edit}
           id={id} />
       }
@@ -91,4 +91,4 @@ function Task({id, title, description, completed}) {
   )
 }
 
-export default Task
+export default TaskStash

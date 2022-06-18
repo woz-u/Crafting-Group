@@ -1,9 +1,9 @@
-import './modal.css'
+import './modalStash.css'
 
-function Modal({open, modalLable, children, custom_modal, onClose}) {
+function ModalStash({open, modalStashLabel, children, custom_Stashmodal, onClose}) {
 
   const handleClose = (e) => {
-    if(e.target.className === 'modalContainer'){
+    if(e.target.className === 'modalStashContainer'){
       onClose()
     }
     return null
@@ -11,10 +11,10 @@ function Modal({open, modalLable, children, custom_modal, onClose}) {
 
   if(open) {
     return (
-      <div className='modalContainer' onClick={handleClose}>
-        <div className= {`modal ${custom_modal}`}>
+      <div className='modalStashContainer' onClick={handleClose}>
+        <div className= {`modal ${custom_Stashmodal}`}>
           <div className='modal__head'>
-            <h2>{modalLable}</h2>
+            <h2>{modalStashLabel}</h2>
             <span className='modal__close' onClick={onClose}>x</span>
           </div>
           {children}
@@ -25,4 +25,4 @@ function Modal({open, modalLable, children, custom_modal, onClose}) {
   return null
 }
 
-export default Modal
+export default ModalStash

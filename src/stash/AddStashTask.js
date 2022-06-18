@@ -1,4 +1,4 @@
-import Modal from "./ModalStash"
+import ModalStash from "./ModalStash"
 import {useState} from 'react'
 import './addStashTask.css'
 import {db} from './controllers/firebase' // original code'./firebase' file path src\controllers\firebase.js
@@ -32,7 +32,7 @@ function AddStashTask({onClose, open}) {
   }
 // add fields to the form to match the database key:values
   return (
-    <Modal modalLabel='Add Stash' onClose={onClose} open={open}>
+    <ModalStash modalLabel='Add Stash' onClose={onClose} open={open}>
       <form onSubmit={handleSubmit} className='addStashTask' name='addStashTask'>
         <input 
           type='text' 
@@ -46,7 +46,7 @@ function AddStashTask({onClose, open}) {
           value={descriptionStash}></textarea>
         <button type='submit'>Done</button>
       </form> 
-    </Modal>
+    </ModalStash>
   )
 }
 

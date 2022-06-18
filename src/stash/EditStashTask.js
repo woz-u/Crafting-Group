@@ -1,8 +1,8 @@
-import Modal from "./ModalStash"
+import ModalStash from "./ModalStash"
 import {useState} from 'react'
 import './editStashTask.css'
 import { doc, updateDoc } from "firebase/firestore";
-import {db} from './controllers/firebase'
+import {db} from './controllers/firebase' // original code'./firebase' file path src\controllers\firebase.js
 
 function EditStashTask({open, onClose, toEditStashTitle, toEditStashDescription, id}) {
 
@@ -26,13 +26,13 @@ function EditStashTask({open, onClose, toEditStashTitle, toEditStashDescription,
   }
 
   return (
-    <Modal modalLabel='Edit Stash Task' onClose={onClose} open={open}>
+    <ModalStash modalLabel='Edit Stash Task' onClose={onClose} open={open}>
       <form onSubmit={handleUpdate} className='editStashTask'>
         <input type='text' name='titleStash' onChange={(e) => setTitleStash(e.target.value.toUpperCase())} value={titleStash}/>
         <textarea onChange={(e) => setDescriptionStash(e.target.value)} value={descriptionStash}></textarea>
         <button type='submit'>Edit</button>
       </form> 
-    </Modal>
+    </ModalStash>
   )
 }
 
