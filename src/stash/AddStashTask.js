@@ -1,23 +1,25 @@
 import Modal from "./ModalStash"
 import {useState} from 'react'
 import './addStashTask.css'
-import {db} from './controllers/firebase' //'./firebase' src\controllers\firebase.js
+import {db} from './controllers/firebase' // original code'./firebase' file path src\controllers\firebase.js
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
-
+// added Stash to all variables & constants
 function AddStashTask({onClose, open}) {
 
   const [titleStash, setTitleStash] = useState('')
   const [descriptionStash, setDescriptionStash] = useState('')
 
-  /* function to add new task to firestore */
+  /* function to add new Stash task to firestore */
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
       await addDoc(collection(db, 'tasksStash'), {
       
-        /*  //title: title,
+        /* original code  //title: title,
         //description: description,
         //completed: false,*/
+
+        //modify and add to this list of key:values for the different items and categories in the Stash
         titleStash: titleStash,
         descriptionStash: descriptionStash,
         completed: false,
@@ -28,13 +30,13 @@ function AddStashTask({onClose, open}) {
       alert(err)
     }
   }
-
+// add fields to the form to match the database key:values
   return (
     <Modal modalLabel='Add Stash' onClose={onClose} open={open}>
       <form onSubmit={handleSubmit} className='addStashTask' name='addStashTask'>
         <input 
           type='text' 
-          name='title' 
+          name='titleStash' 
           onChange={(e) => setTitleStash(e.target.value.toUpperCase())} 
           value={titleStash}
           placeholder='Enter Stash Item'/>

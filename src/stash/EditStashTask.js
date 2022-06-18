@@ -1,22 +1,22 @@
-import Modal from "./Modal"
+import Modal from "./ModalStash"
 import {useState} from 'react'
-import './editTask.css'
+import './editStashTask.css'
 import { doc, updateDoc } from "firebase/firestore";
-import {db} from './firebase'
+import {db} from './controllers/firebase'
 
-function EditTask({open, onClose, toEditTitle, toEditDescription, id}) {
+function EditStashTask({open, onClose, toEditStashTitle, toEditStashDescription, id}) {
 
-  const [title, setTitle] = useState(toEditTitle)
-  const [description, setDescription] = useState(toEditDescription)
+  const [titleStash, setTitleStash] = useState(toEditStashTitle)
+  const [descriptionStash, setDescriptionStash] = useState(toEditStashDescription)
 
   /* function to update firestore */
   const handleUpdate = async (e) => {
     e.preventDefault()
-    const taskDocRef = doc(db, 'tasks', id)
+    const taskDocRef = doc(db, 'tasksStash', id)
     try{
       await updateDoc(taskDocRef, {
-        title: title,
-        description: description
+        titleStash: titleStash,
+        descriptionStash: descriptionStash
       })
       onClose()
     } catch (err) {
@@ -26,14 +26,14 @@ function EditTask({open, onClose, toEditTitle, toEditDescription, id}) {
   }
 
   return (
-    <Modal modalLable='Edit Task' onClose={onClose} open={open}>
-      <form onSubmit={handleUpdate} className='editTask'>
-        <input type='text' name='title' onChange={(e) => setTitle(e.target.value.toUpperCase())} value={title}/>
-        <textarea onChange={(e) => setDescription(e.target.value)} value={description}></textarea>
+    <Modal modalLabel='Edit Stash Task' onClose={onClose} open={open}>
+      <form onSubmit={handleUpdate} className='editStashTask'>
+        <input type='text' name='titleStash' onChange={(e) => setTitleStash(e.target.value.toUpperCase())} value={titleStash}/>
+        <textarea onChange={(e) => setDescriptionStash(e.target.value)} value={descriptionStash}></textarea>
         <button type='submit'>Edit</button>
       </form> 
     </Modal>
   )
 }
 
-export default EditTask
+export default EditStashTask
