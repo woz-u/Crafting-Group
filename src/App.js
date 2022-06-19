@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './all.css';
-import index from './tasks-template' //for the lists
+import index from './tasks-template/index';   //'./src/tasks-template/index' for the lists
 function App() {
   return (
  //could be app
@@ -9,6 +9,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/tasks-template/App.js</code> and save to reload. Or point this to Task.js?
+          ./tasks-template/index
         </p>
         <a
           className="App-link"
