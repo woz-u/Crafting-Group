@@ -6,18 +6,31 @@ import {collection, addDoc, Timestamp} from 'firebase/firestore'
 
 function AddTaskIdeas({onClose, open}) {
 
+  //original
   const [titleIdeas, setTitle] = useState('')
   const [descriptionIdeas, setDescription] = useState('')
+  //original
 
   /* function to add new task to firestore */
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
       await addDoc(collection(db, 'tasksIdeas'), {
+        /* field list
+projectName
+projectType
+category
+tags
+notes
+item
+cost
+qty
+*/
+        //original
         titleIdeas: titleIdeas,
         descriptionIdeas: descriptionIdeas,
         completed: false,
-        created: Timestamp.now()
+        created: Timestamp.now() //original
       })
       onClose()
     } catch (err) {
@@ -28,6 +41,8 @@ function AddTaskIdeas({onClose, open}) {
   return (
     <Modal modalLabel='Add Task Ideas' onClose={onClose} open={open}>
       <form onSubmit={handleSubmit} className='addTaskIdeas' name='addTaskIdeas'>
+
+      ---------------
         <input 
           type='text' 
           name='title' 

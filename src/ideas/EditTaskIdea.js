@@ -4,8 +4,17 @@ import './editTaskIdeas.css'
 import { doc, updateDoc } from "firebase/firestore";
 import {db} from './controllers/firebase' // original code'./firebase' file path src\controllers\firebase.js
 
-function EditTaskIdeas({open, onClose, toEditTitle, toEditDescription, id}) {
-
+function EditTaskIdeas({open, onClose, toEditTitle, toEditDescriptionIdeas, id}) {
+/* field list
+projectName
+projectType
+category
+tags
+notes
+item
+cost
+qty
+*/
   const [titleIdeas, setTitle] = useState(toEditTitle)
   const [descriptionIdeas, setDescription] = useState(toEditDescriptionIdeas)
 
