@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './all.css';
-import Home from './TaskManager' //for the lists
+import index from './tasks-template' //for the lists
 function App() {
   return (
  //could be app
@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload. Or point this to Task.js?
+          Edit <code>src/tasks-template/App.js</code> and save to reload. Or point this to Task.js?
         </p>
         <a
           className="App-link"

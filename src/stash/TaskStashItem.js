@@ -2,7 +2,7 @@ import ModalStash from "./ModalStash"
 import './taskStashItem.css'
 
 function TaskItemStash({onClose, open, titleStash, descriptionStash}) {
-
+//add more fields
   return (
     <ModalStash modalLabel='Task Stash Item' onClose={onClose} open={open}>
       <div className='taskStashItem'>

@@ -4,7 +4,7 @@ import TaskItem from './TaskStashItem'
 import EditTask from './EditStashTask'
 import { doc, updateDoc, deleteDoc} from "firebase/firestore";
 import {db} from './controllers/firebase' // original code'./firebase' file path src\controllers\firebase.js
-
+//need more
 function TaskStash({id, titleStash, descriptionStash, completedStash}) {
 
   const [checked, setCheckedStash] = useState(completedStash)
@@ -35,7 +35,7 @@ function TaskStash({id, titleStash, descriptionStash, completedStash}) {
       alert(err)
     }
   }
-
+//more fields here too 
   return (
     <div className={`task ${checked && 'task--borderColor'}`}>
       <div>

@@ -3,9 +3,9 @@ import {useState} from 'react'
 import './editStashTask.css'
 import { doc, updateDoc } from "firebase/firestore";
 import {db} from './controllers/firebase' // original code'./firebase' file path src\controllers\firebase.js
-
+// more fields
 function EditStashTask({open, onClose, toEditStashTitle, toEditStashDescription, id}) {
-
+//more constants
   const [titleStash, setTitleStash] = useState(toEditStashTitle)
   const [descriptionStash, setDescriptionStash] = useState(toEditStashDescription)
 
@@ -15,6 +15,7 @@ function EditStashTask({open, onClose, toEditStashTitle, toEditStashDescription,
     const taskDocRef = doc(db, 'tasksStash', id)
     try{
       await updateDoc(taskDocRef, {
+   //more here too
         titleStash: titleStash,
         descriptionStash: descriptionStash
       })
@@ -24,7 +25,7 @@ function EditStashTask({open, onClose, toEditStashTitle, toEditStashDescription,
     }
     
   }
-
+//adjust form
   return (
     <ModalStash modalLabel='Edit Stash Task' onClose={onClose} open={open}>
       <form onSubmit={handleUpdate} className='editStashTask'>

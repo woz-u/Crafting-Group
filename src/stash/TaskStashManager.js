@@ -27,14 +27,14 @@ function TaskStashManager() {
       <div className='taskStashManager__container'>
         <button 
           onClick={() => setOpenAddStashModal(true)}>
-          Add task +
+          Add Stash task +
         </button>
         <div className='taskManagerStash__tasks'>
 
           {tasksStash.map((taskStash) => (
             <TaskStash
-              id={taskStash.id}
-              key={taskStash.id}
+              id={taskStash.id} //auto gen
+              key={taskStash.id} //auto gen
               completed={taskStash.data.completed}
               title={taskStash.data.title} 
               description={taskStash.data.description}
