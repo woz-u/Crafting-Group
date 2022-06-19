@@ -1,16 +1,16 @@
-import Modal from "./Modal"
-import './taskItem.css'
+import ModalStash from "./ModalStash"
+import './taskStashItem.css'
 
-function TaskItem({onClose, open, title, description}) {
-
+function TaskItemStash({onClose, open, titleStash, descriptionStash}) {
+//add more fields
   return (
-    <Modal modalLabel='Task Item' onClose={onClose} open={open}>
-      <div className='taskItem'>
-        <h2>{title}</h2>
-        <p>{description}</p>
+    <ModalStash modalLabel='Task Stash Item' onClose={onClose} open={open}>
+      <div className='taskStashItem'>
+        <h2>{titleStash}</h2>
+        <p>{descriptionStash}</p>
       </div>
-    </Modal>
+    </ModalStash>
   )
 }
 
-export default TaskItem
+export default TaskItemStash

@@ -1,3 +1,5 @@
+//to be used as a task list, shopping list, project list and stash list for the CRUD portion. Each list has it's own copy of this task list template and is configured for it's section. Each has it's own modal for entry of information. Each area has a named page that will read and display a paged variation of the data in either a card format or a table/list. Each area also has an item page for single item views as well.
+
 import Modal from "./Modal"
 import {useState} from 'react'
 import './addTask.css'
