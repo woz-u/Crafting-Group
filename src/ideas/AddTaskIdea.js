@@ -1,23 +1,36 @@
-import Modal from "./Modal"
+import Modal from "./ModalIdeas"
 import {useState} from 'react'
-import './addTask.css'
-import {db} from './firebase'
+import './addTaskIdeas.css'
+import {db} from './controllers/firebase' // original code'./firebase' file path src\controllers\firebase.js
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
 
-function AddTask({onClose, open}) {
+function AddTaskIdeas({onClose, open}) {
 
-  const [title, setTitle] = useState('')
-  const [description, setDescription] = useState('')
+  //original
+  const [titleIdeas, setTitle] = useState('')
+  const [descriptionIdeas, setDescription] = useState('')
+  //original
 
   /* function to add new task to firestore */
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await addDoc(collection(db, 'tasks'), {
-        title: title,
-        description: description,
+      await addDoc(collection(db, 'tasksIdeas'), {
+        /* field list
+projectName
+projectType
+category
+tags
+notes
+item
+cost
+qty
+*/
+        //original
+        titleIdeas: titleIdeas,
+        descriptionIdeas: descriptionIdeas,
         completed: false,
-        created: Timestamp.now()
+        created: Timestamp.now() //original
       })
       onClose()
     } catch (err) {
@@ -26,22 +39,24 @@ function AddTask({onClose, open}) {
   }
 
   return (
-    <Modal modalLable='Add Task' onClose={onClose} open={open}>
-      <form onSubmit={handleSubmit} className='addTask' name='addTask'>
+    <Modal modalLabel='Add Task Ideas' onClose={onClose} open={open}>
+      <form onSubmit={handleSubmit} className='addTaskIdeas' name='addTaskIdeas'>
+
+      ---------------
         <input 
           type='text' 
           name='title' 
           onChange={(e) => setTitle(e.target.value.toUpperCase())} 
-          value={title}
-          placeholder='Enter title'/>
+          value={titleIdeas}
+          placeholder='Enter title Ideas'/>
         <textarea 
           onChange={(e) => setDescription(e.target.value)}
-          placeholder='Enter task description'
-          value={description}></textarea>
+          placeholder='Enter task Ideas description'
+          value={descriptionIdeas}></textarea>
         <button type='submit'>Done</button>
       </form> 
     </Modal>
   )
 }
 
-export default AddTask
+export default AddTaskIdeas

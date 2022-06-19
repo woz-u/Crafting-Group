@@ -1,18 +1,18 @@
-import './taskManager.css'
-import Task from './Task'
+import './taskManagerIdeas.css'
+import Task from './TaskIdeas'
 import {useState, useEffect} from 'react'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
-import {db} from './firebase'
-import AddTask from './AddTask'
+import {db} from './controllers/firebase' // original code'./firebase' file path src\controllers\firebase.js
+import AddTask from './AddTaskIdeas'
 
-function TaskManager() {
+function TaskManagerIdeas() {
 
   const [openAddModal, setOpenAddModal] = useState(false)
-  const [tasks, setTasks] = useState([])
+  const [tasksIdeas, setTasks] = useState([])
 
   /* function to get all tasks from firestore in realtime */ 
   useEffect(() => {
-    const taskColRef = query(collection(db, 'tasks'), orderBy('created', 'desc'))
+    const taskColRef = query(collection(db, 'tasksIdeas'), orderBy('created', 'descIdeas'))
     onSnapshot(taskColRef, (snapshot) => {
       setTasks(snapshot.docs.map(doc => ({
         id: doc.id,
@@ -22,12 +22,12 @@ function TaskManager() {
   },[])
 
   return (
-    <div className='taskManager'>
-      <header>Task Manager</header>
+    <div className='taskManagerIdeas'>
+      <header>Task Manager Ideas</header>
       <div className='taskManager__container'>
         <button 
           onClick={() => setOpenAddModal(true)}>
-          Add task +
+          Add task Ideas +
         </button>
         <div className='taskManager__tasks'>
 
@@ -36,8 +36,8 @@ function TaskManager() {
               id={task.id}
               key={task.id}
               completed={task.data.completed}
-              title={task.data.title} 
-              description={task.data.description}
+              titleIdeas={taskIdeas.data.title} 
+              descriptionIdeas={taskIdeas.data.description}
             />
           ))}
 
@@ -45,11 +45,11 @@ function TaskManager() {
       </div>
 
       {openAddModal &&
-        <AddTask onClose={() => setOpenAddModal(false)} open={openAddModal}/>
+        <AddTaskIdeas onClose={() => setOpenAddModal(false)} open={openAddModal}/>
       }
 
     </div>
   )
 }
 
-export default TaskManager
+export default TaskManagerIdeas

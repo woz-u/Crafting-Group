@@ -1,13 +1,22 @@
-import Modal from "./Modal"
+import Modal from "./ModalIdeas"
 import {useState} from 'react'
-import './editTask.css'
+import './editTaskIdeas.css'
 import { doc, updateDoc } from "firebase/firestore";
-import {db} from './firebase'
+import {db} from './controllers/firebase' // original code'./firebase' file path src\controllers\firebase.js
 
-function EditTask({open, onClose, toEditTitle, toEditDescription, id}) {
-
-  const [title, setTitle] = useState(toEditTitle)
-  const [description, setDescription] = useState(toEditDescription)
+function EditTaskIdeas({open, onClose, toEditTitle, toEditDescriptionIdeas, id}) {
+/* field list
+projectName
+projectType
+category
+tags
+notes
+item
+cost
+qty
+*/
+  const [titleIdeas, setTitle] = useState(toEditTitle)
+  const [descriptionIdeas, setDescription] = useState(toEditDescriptionIdeas)
 
   /* function to update firestore */
   const handleUpdate = async (e) => {
@@ -15,8 +24,8 @@ function EditTask({open, onClose, toEditTitle, toEditDescription, id}) {
     const taskDocRef = doc(db, 'tasks', id)
     try{
       await updateDoc(taskDocRef, {
-        title: title,
-        description: description
+        titleIdeas: titleIdeas,
+        descriptionIdeas: descriptionIdeas
       })
       onClose()
     } catch (err) {
@@ -26,14 +35,14 @@ function EditTask({open, onClose, toEditTitle, toEditDescription, id}) {
   }
 
   return (
-    <Modal modalLable='Edit Task' onClose={onClose} open={open}>
-      <form onSubmit={handleUpdate} className='editTask'>
-        <input type='text' name='title' onChange={(e) => setTitle(e.target.value.toUpperCase())} value={title}/>
-        <textarea onChange={(e) => setDescription(e.target.value)} value={description}></textarea>
+    <ModalIdeas modalLabel='Edit Task Ideas' onClose={onClose} open={open}>
+      <form onSubmit={handleUpdate} className='editTaskIdeas'>
+        <input type='text' name='titleIdeas' onChange={(e) => setTitle(e.target.value.toUpperCase())} value={titleIdeas}/>
+        <textarea onChange={(e) => setDescription(e.target.value)} value={descriptionIdeas}></textarea>
         <button type='submit'>Edit</button>
       </form> 
-    </Modal>
+    </ModalIdeas>
   )
 }
 
-export default EditTask
+export default EditTaskIdeas

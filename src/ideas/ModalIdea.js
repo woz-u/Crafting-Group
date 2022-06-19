@@ -1,6 +1,6 @@
 import './modal.css'
 
-function Modal({open, modalLable, children, custom_modal, onClose}) {
+function ModalIdea({open, modalLabel, children, custom_modal, onClose}) {
 
   const handleClose = (e) => {
     if(e.target.className === 'modalContainer'){
@@ -14,7 +14,7 @@ function Modal({open, modalLable, children, custom_modal, onClose}) {
       <div className='modalContainer' onClick={handleClose}>
         <div className= {`modal ${custom_modal}`}>
           <div className='modal__head'>
-            <h2>{modalLable}</h2>
+            <h2>{modalLabel}</h2>
             <span className='modal__close' onClick={onClose}>x</span>
           </div>
           {children}
@@ -25,4 +25,4 @@ function Modal({open, modalLable, children, custom_modal, onClose}) {
   return null
 }
 
-export default Modal
+export default ModalIdea

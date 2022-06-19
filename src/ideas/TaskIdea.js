@@ -1,11 +1,11 @@
-import './task.css'
+import './taskIdeas.css'
 import {useState} from 'react'
-import TaskItem from './TaskItem'
-import EditTask from './EditTask'
+import TaskItemIdeas from './TaskItemIdeas'
+import EditTaskIdeas from './EditTaskIdeas'
 import { doc, updateDoc, deleteDoc} from "firebase/firestore";
-import {db} from './firebase'
+import {db} from './controllers/firebase' // original code'./firebase' file path src\controllers\firebase.js
 
-function Task({id, title, description, completed}) {
+function TaskIdeas({id, titleIdeas, descriptionIdeas, completed}) {
 
   const [checked, setChecked] = useState(completed)
   const [open, setOpen] = useState({edit:false, view:false})
@@ -16,7 +16,7 @@ function Task({id, title, description, completed}) {
 
   /* function to update firestore */
   const handleChange = async () => {
-    const taskDocRef = doc(db, 'tasks', id)
+    const taskDocRef = doc(db, 'tasksIdeas', id)
     try{
       await updateDoc(taskDocRef, {
         completed: checked
@@ -28,7 +28,7 @@ function Task({id, title, description, completed}) {
 
   /* function to delete a document from firstore */ 
   const handleDelete = async () => {
-    const taskDocRef = doc(db, 'tasks', id)
+    const taskDocRef = doc(db, 'tasksIdeas', id)
     try{
       await deleteDoc(taskDocRef)
     } catch (err) {
@@ -71,18 +71,18 @@ function Task({id, title, description, completed}) {
       </div>
 
       {open.view &&
-        <TaskItem 
+        <TaskItemIdeas 
           onClose={handleClose} 
-          title={title} 
-          description={description} 
+          titleIdeas={titleIdeas} 
+          descriptionIdeas={descriptionIdeas} 
           open={open.view} />
       }
 
       {open.edit &&
-        <EditTask 
+        <EditTaskIdeas 
           onClose={handleClose} 
-          toEditTitle={title} 
-          toEditDescription={description} 
+          toEditTitleIdeas={titleIdeas} 
+          toEditDescriptionIdeas={descriptionIdeas} 
           open={open.edit}
           id={id} />
       }
@@ -91,4 +91,4 @@ function Task({id, title, description, completed}) {
   )
 }
 
-export default Task
+export default TaskIdeas
