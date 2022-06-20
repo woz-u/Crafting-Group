@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './all.css';
-import index from './tasks-template/index';   //'./src/tasks-template/index' for the lists
+import 'App.css';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+function Hello(props) {
+  return <h1>Hello World src/app.js!</h1>;
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Hello />);
+
 function App() {
   return (
  //could be app
     <div className="App"> 
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/tasks-template/App.js</code> and save to reload. Or point this to Task.js?
-          ./tasks-template/index
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>
+          Did it work?
+        </h1>
+            </header>
     </div>
   );
 }
