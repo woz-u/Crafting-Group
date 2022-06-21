@@ -1,13 +1,10 @@
 //Crafting PM Firebase
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
 // FireStore Import
 import { getFirestore } from "firebase/firestore"
-
 //Google Auth Import
 
 
@@ -25,11 +22,8 @@ const firebaseConfig = {
 
 //POPUP Auth for Google
 import { GoogleAuthProvider } from "firebase/auth";
-
 var provider = new firebase.auth.GoogleAuthProvider();
-
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-
 const auth = getAuth();
 signInWithPopup(auth, provider)
   .then((result) => {
@@ -49,8 +43,6 @@ signInWithPopup(auth, provider)
     const credential = GoogleAuthProvider.credentialFromError(error);
     // ...
   });
-
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app)
