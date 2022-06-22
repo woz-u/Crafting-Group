@@ -10,3 +10,8 @@ const pagination = (
         </ul>
       </nav>
 );
+//this needs the logic for pagination added
+//decide on 5 or 10 items
+//show or hide depending on if there are 5(10) or more items on the page
+//show number of pages that have 5 items on them
+//stretch goal

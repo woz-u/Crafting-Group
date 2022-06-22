@@ -23,3 +23,5 @@ var myCollapsible = document.getElementById('myCollapsible')
 var collapseList = collapseElementList.map(function (collapseEl) {
   return new bootstrap.Collapse(collapseEl)
 });
+
+//this needs to be setup to be exported/imported to a index page?

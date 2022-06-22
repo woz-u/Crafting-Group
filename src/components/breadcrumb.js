@@ -8,3 +8,6 @@
   </nav>
 </div>
 );
+//logic based on routing navigation logic
+//may NOT use depending on time limits
+//stretch goal

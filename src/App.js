@@ -1,13 +1,11 @@
 import 'App.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+// import AddTask from './tasks-template/AddTask';
+// import editTask from './tasks-template/EditTask';
+import Home from './TaskManager'
+import index from './tasks-template/index';
 
-function Hello(props) {
-  return <h1>Hello World src/app.js!</h1>;
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Hello />);
 
 function App() {
   return (
@@ -22,4 +20,9 @@ function App() {
   );
 }
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<App />);
+
 export default App;
+
+App.js
