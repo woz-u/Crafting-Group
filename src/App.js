@@ -3,8 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 // import AddTask from './tasks-template/AddTask';
 // import editTask from './tasks-template/EditTask';
-import Home from './TaskManager'
-import index from './tasks-template/index';
+import TaskManager from './TaskManager'
 
 
 function App() {
@@ -12,6 +11,8 @@ function App() {
  //could be app
     <div className="App"> 
       <header className="App-header">
+
+        <TaskManager/>
         <h1>
           Did it work?
         </h1>
