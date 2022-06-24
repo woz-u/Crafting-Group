@@ -5,7 +5,7 @@ import EditTask from './EditTask'
 import { doc, updateDoc, deleteDoc} from "firebase/firestore";
 import {db} from './firebase'
 
-function Task({id, title, description, completed}) {
+function Task({id, title, budget, description, completed}) {
 
   const [checked, setChecked] = useState(completed)
   const [open, setOpen] = useState({edit:false, view:false})
@@ -74,6 +74,7 @@ function Task({id, title, description, completed}) {
         <TaskItem 
           onClose={handleClose} 
           title={title} 
+          budget={budget} //<-- added
           description={description} 
           open={open.view} />
       }
@@ -82,6 +83,7 @@ function Task({id, title, description, completed}) {
         <EditTask 
           onClose={handleClose} 
           toEditTitle={title} 
+          toEditBudget={budget} // --< added
           toEditDescription={description} 
           open={open.edit}
           id={id} />
