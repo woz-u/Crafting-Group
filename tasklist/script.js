@@ -1,3 +1,25 @@
+ //Delete Button 
+ function deleteTask(deleteTask) {
+  alert("This task will be deleted...");
+  document.getElementById("button").deleteTask();
+}
+
+// function newFunction() {
+//   document.getElementById("newForm").reset();
+// }
+
+//Save and Submit Button
+function saveTask(saveTask) {
+  alert("This task will be saved and submitted...");
+  document.getElementById("button").saveTask;
+}
+
+//Reset Button
+function resetTask(resetTask) {
+  alert("This task will be reset...");
+  document.getElementById("button").resetTask;
+}
+ 
  // On app load, get all tasks from localStorage
  window.onload = loadTasks;
 
@@ -110,3 +132,4 @@
    // update local storage
    localStorage.setItem("tasks", JSON.stringify(tasks));
  }
+
