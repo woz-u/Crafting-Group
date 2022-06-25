@@ -1,9 +1,19 @@
-* {
-	text-align: center;
-	font-family: 'Times New Roman', Times, serif;
-	text-indent: 1px;
+body {
+	background-color: aliceblue;
+	display:block;
+	align-items: left;
+	text-align: left;
+	justify-content: left;
+	text-align: left;
+	font-size: 25px;
+	border: 10px, groove, black;
+	margin: 80px;
+	padding: 10px;
 }
 
+.center {
+	text-align: center;
+}
 .container {
 	display: flex; 
 	flex-direction: column;
@@ -13,7 +23,7 @@
 	text-align: center;
 }
 
-.app{
+.app {
 	width: 60%;
 }
 
@@ -21,4 +31,91 @@
 	.app {
 		width: 90%
 	}
+}
+.app h1 {
+font-family: 'Times New Roman', Times, serif;
+text-align: center;
+padding: 50px
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
+
+
+
+.app form {
+  display: flex;
+  width: 100%;
+  background-color: whitesmoke;
+}
+
+.app form input {
+  border: none;
+  background-color: whitesmoke;
+  font-size: 18px;
+  color:black;
+  padding: 10px;
+  width: 90%;
+}
+
+.app form button {
+  border: none;
+  color: black;
+  background-color: whitesmoke;
+  font-size: 25px;
+  font-weight: 600;
+  height: 42px;
+  width: 10%;
+}
+
+.app ul {
+  list-style: none;
+  color: black;
+  padding: 0;
+}
+
+.app ul li {
+  padding: 10px;
+  background-color: whitesmoke;
+  border-bottom: 1px solid #3a4674;
+}
+
+.check {
+  width: 0.8em;
+  height: 0.8em;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid rgb(255, 255, 255);
+  -webkit-appearance: none;
+}
+
+.check:checked {
+  background-color: whitesmoke;
+}
+
+.task {
+  font-size: 18px;
+  padding: 0 10px;
+  width: fit-content;
+  background: transparent;
+  border: none;
+  color: black;
+}
+
+.task:focus {
+  outline: none;
+}
+
+.app ul li i {
+  float: right;
+  cursor: pointer;
+}
+
+.app ul li i:hover {
+  color: blue;
+}
+
+.completed {
+  color: red;
+  text-decoration: line-through;
 }
