@@ -27,7 +27,7 @@ function TaskManager() {
       <div className='taskManager__container'>
         <button 
           onClick={() => setOpenAddModal(true)}>
-          Add task +
+          Add Project +
         </button>
         <div className='taskManager__tasks'>
 
@@ -37,7 +37,9 @@ function TaskManager() {
               key={task.id}
               completed={task.data.completed}
               title={task.data.title} 
+              budget={task.data.budget} // <--added this one
               description={task.data.description}
+             
             />
           ))}
 
