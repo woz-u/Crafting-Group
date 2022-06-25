@@ -1,11 +1,12 @@
 import './App.css';
 import Home from './TaskManager'
-// import header from '../components/header'
+import Header from './components/header'
+
 function App() {
 
   return (
     <div className='app'>
-      {/* <header /> */}
+      <Header />
       <Home />
     </div>
   );

@@ -1,4 +1,4 @@
- const breadcrumb = (
+ const BREADCRUMB = (
   <div class = "container">
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -8,6 +8,7 @@
   </nav>
 </div>
 );
+export default BREADCRUMB
 //logic based on routing navigation logic
 //may NOT use depending on time limits
 //stretch goal
