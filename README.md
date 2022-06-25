@@ -1,6 +1,6 @@
 # Crafting Project Manager
 
-This project is the Capstone for Sue Darby, Stacie Wyatt and Devine Sims through Entity Academy/Woz-U. 
+This project is the Capstone for Sue Darby, Stacie Wyatt and Devine Sims through Entity Academy/Woz-U. The main app is found in the task-manager-main folder
 
 ## Executive Summary
 
