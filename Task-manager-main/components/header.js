@@ -1,4 +1,4 @@
-const header = (
+const HEADER = (
     <header>
     <div class="px-3 py-2 bg-dark text-white">
       <div class="container">
@@ -50,6 +50,8 @@ const header = (
 
         <div class="text-end">
           <button type="button" class="btn btn-light text-dark me-2">Login</button>
+          <button onclick = "googleSignin()">Google Signin</button>
+          <button onclick = "googleSignout()">Google Signout</button>
           <button type="button" class="btn btn-primary">Sign-up</button>
         </div>
       </div>
@@ -58,7 +60,7 @@ const header = (
 
   );
 
-  export default header
+  export default HEADER
   //needs the logic for routing pages
   //needs search logic
   //needs signin/out via google logic here?
