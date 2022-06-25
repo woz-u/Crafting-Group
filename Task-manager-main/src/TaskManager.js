@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
 import {db} from './firebase'
 import AddTask from './AddTask'
+// import header from '../components/header'
 
 function TaskManager() {
 
@@ -23,6 +24,7 @@ function TaskManager() {
 //controls the list page
   return (
     <div className='taskManager'>
+      <header />
       <header>Craft Project</header>
       <div className='taskManager__container'>
         <button 
