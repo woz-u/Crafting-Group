@@ -9,9 +9,9 @@ Every crafter knows the pain of not being able to find something and spending th
 The focus for this project is as follows:
 
 - Projects
-- Stash
-- Shopping
-- Budget
+- Stash (future)
+- Shopping (future)
+- Budget (future)
 - Dashboard
 
 The functionality is based on a Task-Manager repo by https://github.com/Tammibriggs/Task-manager and is modded to meet the needs of the project.
@@ -34,15 +34,15 @@ The functionality is based on a Task-Manager repo by https://github.com/Tammibri
   -   UFO (Unfinished Object) 
   -   Future project with a supply list and inspiration
   -   Supplies are checked against the stash and if not found added to the shopping list (future feature)
-- Shopping List 
+- Shopping List (future feature)
   -   List of items to purchase to complete a project
   -   Items to refresh the stash for common items
-- Stash 
+- Stash (future feature)
   -   Shows what is in the stash
   -   Where it is stored
   -   Where it was last seen
   -   Tracks the quantity of items in the stash and adds to the shopping list when the quantity gets low (future feature)
-- Budgets will show if a project is over or under a targeted budget to assist with money management.
+- Budgets will show if a project is over or under a targeted budget to assist with money management.(future feature)
 
 
 ========================================================================================================================
