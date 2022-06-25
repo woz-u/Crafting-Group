@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 function increaseCount(a, b) {
 	var input = b.previousElementSibling;
 	var value = parseInt(input.value, 10);
