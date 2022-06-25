@@ -3,11 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
+// import Header from './components/header.js';
+// import FOOTER from 'footer';
+// import BREADCRUMB from 'breadcrumb';
+// import PAGINATION from 'pagination'; 
+// import SIDENAV from 'sidenav';
 
 ReactDOM.render(
   <React.StrictMode>
+    {/* <Header /> */}
+    {/* <BREADCRUMB /> */}
+    {/* <SIDENAV /> */}
     <App />
-  </React.StrictMode>,
+    {/* <PAGINATION /> */}
+    {/* <FOOTER /> */}
+</React.StrictMode>,
   document.getElementById('root')
 );
 

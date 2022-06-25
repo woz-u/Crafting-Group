@@ -1,5 +1,5 @@
 
-    const sidenav = (
+    const SIDENAV = (
       <div>
     <p>
     <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
@@ -24,4 +24,5 @@ var collapseList = collapseElementList.map(function (collapseEl) {
   return new bootstrap.Collapse(collapseEl)
 });
 
+export default PAGINATION
 //this needs to be setup to be exported/imported to a index page?

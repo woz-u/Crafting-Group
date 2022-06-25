@@ -1,4 +1,4 @@
-    const footer = (
+    const FOOTER = (
     <div class="container">
     <footer class="py-3 my-4">
       <ul class="nav justify-content-center border-bottom pb-3 mb-3">
@@ -12,6 +12,7 @@
     </footer>
   </div>
   );
+  export default FOOTER
   //needs routing logic same as header
   //needs date() function for copyright year
 
