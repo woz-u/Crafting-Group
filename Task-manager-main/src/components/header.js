@@ -2,7 +2,6 @@
 import {auth, provider  } from './../firebase'
 import {signInWithPopup, signOut}from 'firebase/auth'
 
-
 function Header() {
 
   const googleSignIn =(e) =>{
@@ -15,8 +14,7 @@ function Header() {
       console.log(error.message);
     })
   }
-  
-  
+    
   const logOut =()=>{
     signOut(auth).then(()=>{
       console.log("I'm logged out");
