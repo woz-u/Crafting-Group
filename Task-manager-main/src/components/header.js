@@ -1,7 +1,31 @@
+// import {} from 'firebase';
+import {auth, provider  } from './../firebase'
+import {signInWithPopup, signOut}from 'firebase/auth'
+
 function Header() {
 
+  const googleSignIn =(e) =>{
+    e.preventDefault();
+    signInWithPopup(auth, provider)
+    .then((result)=>{
+      console.log(`I'm logged ${result}`);
+    })
+    .catch((error) =>{
+      console.log(error.message);
+    })
+  }
+    
+  const logOut =()=>{
+    signOut(auth).then(()=>{
+      console.log("I'm logged out");
+    }).catch((error)=>{
+      console.log(error.message);
+    });
+  };
+
+
   return (
-  <div>
+  <div class="container">
     <div class="px-3 py-2 bg-dark text-white">
       <div class="container">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
@@ -12,36 +36,11 @@ function Header() {
           <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
             <li>
             <a href="#">Home</a>
-              {/* <a href="home.html" class="nav-link text-secondary">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"></svg>
-                Home
-              </a> */}
+            
             </li>
             <li><a href="#">Dash</a>
-              {/* <a href="index.js" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"></svg>
-                Dashboard
-              </a> */}
-            </li>
-            {/* <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"></svg>
-                Orders
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"></svg>
-                Products
-              </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link text-white">
-                <svg class="bi d-block mx-auto mb-1" width="24" height="24"></svg>
-                Customers
-              </a>
-            </li> */}
-          </ul>
+                         </li>
+                     </ul>
         </div>
       </div>
     </div>
@@ -53,13 +52,14 @@ function Header() {
 
         <div class="text-end">
           {/* <button type="button" class="btn btn-light text-dark me-2">Login</button> */}
-          <button onclick = "googleSignin()">Google Signin</button>
-          <button onclick = "googleSignout()">Google Signout</button>
-          <button type="button" class="btn btn-primary">Sign-up</button>
+          <button onClick={googleSignIn}> Sign in with Google</button>
+      <button onClick={logOut}>Log out</button>
+      
         </div>
       </div>
     </div>
   </div>
+  
   );
           }
   export default Header
