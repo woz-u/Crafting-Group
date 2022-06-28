@@ -12,14 +12,16 @@ body {
 }
 
 .button {
+  background-color: aliceblue;
   text-align: center;
-  display:block;
+  display:flex;
   align-items: center;
   justify-content: center;
-  font-size: 10px; 
+  font-size: 25px; 
   border: 10px, groove, black;
-  margin: 70px;
+  margin: 80px;
   padding: 10px;
+  width: 20%;
 }
 
 .center {

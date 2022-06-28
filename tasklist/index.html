@@ -8,40 +8,37 @@
 
   <body>
     <header class="center">
-        <h1 class="todo">Task List</h1>
-        <ul>	<!--taskList-->
-          <div class="container2">
-            <form class="task-form">
-              <input autofocus type="text" aria-label="Enter a new task" placeholder="Add new task..."/>
-              <button type="submit"> Add Task </button> <br>        
-            </form>
-        </div>
-        </ul>
+        <h1>Task List</h1>
     </header>
-       
-<!--buttons need functionality. another idea is to have a reset and delete by each task-->
-    <div class="button">
 
-      <!--<button
-        type="button"
-        id="save"
-        value="save"
-        onclick="saveTask()"
-      >
-        Save and Submit
-      </button>-->
+    <ul>	<!--taskList-->
+      <div class="container">
+        <form class="form" >
+          <div>
+          <!--<button type="submit"> Add Task </button>-->
+          <input autofocus type="text" placeholder="Add new task..." required/><br>
 
-    <button type="reset" class="clear-btn" id="reset" value="reset" onclick="resetTask()"> Clear Task List <button>
+          <!--Reset Button-->
+          <button type="reset" class="resetTask" id="resetTask" value="Reset" onclick="resetTask('This task will be reset')"> Reset Task List </button>
 
-      <button
-        type="button"
-        id="del"
-        value="delete"
-        onclick="deleteTask()"
-      >
-        Delete
-      </button>
+           <!--button onClick="resetTask()"-->
+            <!--function resetTask(){}-->
+          </div>
+        </form>
     </div>
+    </ul>
+
+           
+<!--buttons need functionality. another idea is to have a reset and delete by each task-->
+    <!--<div class="button">-->
+
+    <!--<button type="button" id="save" value="save" onclick="saveTask()"> Save and Submit </button>-->
+
+  <!-- <button type="reset" class="clear-btn" id="reset" value="reset" onclick="resetTask()"> Clear Task List </button>-->
+
+    <!--<button type="button" id="del" value="delete" onclick="deleteTask()"> Delete Tasks </button>-->
+
+   <!--</div>--> 
 
   <script src="script.js"></script>
   </body>

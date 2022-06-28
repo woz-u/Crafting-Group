@@ -1,8 +1,8 @@
  //Delete Button 
- function deleteTask(deleteTask) {
-  alert("This task will be deleted...");
-  document.getElementById("button").deleteTask();
-}
+//  function deleteTask(deleteTask) {
+//   alert("This task will be deleted...");
+//   document.getElementById("button").deleteTask();
+// }
 
 // //Save and Submit Button
 // function saveTask(saveTask) {
@@ -11,12 +11,19 @@
 // }
 
 //Reset Button
-function resetTask(resetTask) {
-  alert("This task will be cleared...");
-  document.getElementById("button").resetTask;
-}
 
-// clearAll = document.querySelector(".clear-btn"),
+// function resetTask(reset){
+//   alert("This task will be cleared...");
+//   document.getElementById("button").resetTask;
+// }
+//clear all
+
+// let clearBtn = document.querySelector("clearBtn");
+// let inputs = document.querySelectorAll('input');
+// btnClear.addEventListener ('click', () => {
+//   inputs.forEach(input =>  input.value = '');
+
+// });
 
 //possible trash can by each task. 
 
