@@ -15,7 +15,15 @@ function resetTask(resetTask) {
   alert("This task will be reset...");
   document.getElementById("button").resetTask;
 }
- 
+
+//possible trash can by each task. 
+
+
+
+
+
+
+ //borrowed code goes below this line//
  // On app load, get all tasks from localStorage
  window.onload = loadTasks;
 
