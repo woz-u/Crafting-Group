@@ -4,15 +4,11 @@
   document.getElementById("button").deleteTask();
 }
 
-// function newFunction() {
-//   document.getElementById("newForm").reset();
+// //Save and Submit Button
+// function saveTask(saveTask) {
+//   alert("This task will be saved and submitted...");
+//   document.getElementById("button").saveTask;
 // }
-
-//Save and Submit Button
-function saveTask(saveTask) {
-  alert("This task will be saved and submitted...");
-  document.getElementById("button").saveTask;
-}
 
 //Reset Button
 function resetTask(resetTask) {
