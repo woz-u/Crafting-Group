@@ -1,4 +1,5 @@
-const PAGINATION = (
+function Pagination() {
+  return (
 
     <nav aria-label="Page navigation example">
         <ul class="pagination">
@@ -9,8 +10,9 @@ const PAGINATION = (
           <li class="page-item"><a class="page-link" href="#">Next</a></li>
         </ul>
       </nav>
-);
-export default PAGINATION
+)
+  };
+export default Pagination
 //this needs the logic for pagination added
 //decide on 5 or 10 items
 //show or hide depending on if there are 5(10) or more items on the page

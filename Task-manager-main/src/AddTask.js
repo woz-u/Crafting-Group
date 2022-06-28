@@ -32,7 +32,7 @@ function AddTask({onClose, open}) {
 //added budget
   return (
     <Modal modalLabel='Add Project' onClose={onClose} open={open}>
-      <form onSubmit={handleSubmit} className='addTask' name='addTask'>
+      <form onSubmit={handleSubmit} name='addTask' name='addTask'>
         <input type='text' name='title' onChange={(e) => setTitle(e.target.value.toUpperCase())} 
           value={title} placeholder='Enter title'/>
         <input type='number' name='budget' onChange={(e) => setBudget(e.target.value)} 

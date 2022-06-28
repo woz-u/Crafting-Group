@@ -28,7 +28,7 @@ function EditTask({open, onClose, toEditTitle, toEditBudget, toEditDescription, 
 // added budget
   return (
     <Modal modalLabel='Edit Project' onClose={onClose} open={open}>
-      <form onSubmit={handleUpdate} className='editTask'>
+      <form onSubmit={handleUpdate} name='editTask'>
         <input type='text' name='title' onChange={(e) => setTitle(e.target.value.toUpperCase())} value={title}/>
         <input type='number' name='budget' onChange={(e) => setBudget(e.target.value)} value={budget}/>
         <textarea onChange={(e) => setDescription(e.target.value)} value={description}></textarea>

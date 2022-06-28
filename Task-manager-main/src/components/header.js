@@ -25,15 +25,15 @@ function Header() {
 
 
   return (
-  <div class="container">
-    <div class="px-3 py-2 bg-dark text-white">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"></svg>
+  <div name="container">
+    <div name="px-3 py-2 bg-dark text-white">
+      <div name="container">
+        <div name="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" name="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+            <svg name="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"></svg>
           </a>
 
-          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+          <ul name="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
             <li>
             <a href="#">Home</a>
             
@@ -44,14 +44,14 @@ function Header() {
         </div>
       </div>
     </div>
-    <div class="px-3 py-2 border-bottom mb-3">
-      <div class="container d-flex flex-wrap justify-content-center">
-        <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
-          <input type="search" class="form-control" placeholder="Search..." aria-label="Search" />
+    <div name="px-3 py-2 border-bottom mb-3">
+      <div name="container d-flex flex-wrap justify-content-center">
+        <form name="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
+          <input type="search" name="form-control" placeholder="Search..." aria-label="Search" />
         </form>
 
-        <div class="text-end">
-          {/* <button type="button" class="btn btn-light text-dark me-2">Login</button> */}
+        <div name="text-end">
+          {/* <button type="button" name="btn btn-light text-dark me-2">Login</button> */}
           <button onClick={googleSignIn}> Sign in with Google</button>
       <button onClick={logOut}>Log out</button>
       

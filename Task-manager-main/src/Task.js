@@ -38,31 +38,31 @@ function Task({id, title, budget, description, completed}) {
   }
 
   return (
-    <div className={`task ${checked && 'task--borderColor'}`}>
+    <div name={`task ${checked && 'task--borderColor'}`}>
       <div>
         <input 
           id={`checkbox-${id}`} 
-          className='checkbox-custom'
+          name='checkbox-custom'
           name="checkbox" 
           checked={checked}
           onChange={handleChange}
           type="checkbox" />
         <label 
           htmlFor={`checkbox-${id}`} 
-          className="checkbox-custom-label" 
+          name="checkbox-custom-label" 
           onClick={() => setChecked(!checked)} ></label>
       </div>
-      <div className='task__body'>
+      <div name='task__body'>
         <h2>{title}</h2>
         <p>{description}</p>
-        <div className='task__buttons'>
-          <div className='task__deleteNedit'>
+        <div name='task__buttons'>
+          <div name='task__deleteNedit'>
             <button 
-              className='task__editButton' 
+              name='task__editButton' 
               onClick={() => setOpen({...open, edit : true})}>
               Edit
             </button>
-            <button className='task__deleteButton' onClick={handleDelete}>Delete</button>
+            <button name='task__deleteButton' onClick={handleDelete}>Delete</button>
           </div>
           <button 
             onClick={() => setOpen({...open, view: true})}>

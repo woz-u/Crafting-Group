@@ -1,5 +1,6 @@
 
-    const SIDENAV = (
+function Sidenav() {
+  return (
       <div>
     <p>
     <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
@@ -14,7 +15,8 @@
     </div>
   </div>
   </div>
-);
+  )
+};
 var myCollapsible = document.getElementById('myCollapsible')
   myCollapsible.addEventListener('hidden.bs.collapse', function () {
     // do something...
@@ -22,7 +24,7 @@ var myCollapsible = document.getElementById('myCollapsible')
   var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
 var collapseList = collapseElementList.map(function (collapseEl) {
   return new bootstrap.Collapse(collapseEl)
-});
+})
 
-export default PAGINATION
+export default Sidenav
 //this needs to be setup to be exported/imported to a index page?
