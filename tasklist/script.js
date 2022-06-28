@@ -12,9 +12,11 @@
 
 //Reset Button
 function resetTask(resetTask) {
-  alert("This task will be reset...");
+  alert("This task will be cleared...");
   document.getElementById("button").resetTask;
 }
+
+// clearAll = document.querySelector(".clear-btn"),
 
 //possible trash can by each task. 
 

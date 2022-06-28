@@ -9,20 +9,19 @@
   <body>
     <header class="center">
         <h1 class="todo">Task List</h1>
-        <ul></ul>
+        <ul>	<!--taskList-->
+          <div class="container2">
+            <form class="task-form">
+              <input autofocus type="text" aria-label="Enter a new task" placeholder="Add new task..."/>
+              <button type="submit"> Add Task </button> <br>        
+            </form>
+        </div>
+        </ul>
     </header>
        
-	<!--taskList-->
-
-  <div class="container2">
-      <form class="task-form">
-        <input autofocus type="text" aria-label="Enter a new task" placeholder="Add new task..."/>
-        <button type="submit"> Add Task </button> <br>        
-      </form>
-  </div>
-
 <!--buttons need functionality. another idea is to have a reset and delete by each task-->
     <div class="button">
+
       <!--<button
         type="button"
         id="save"
@@ -32,14 +31,7 @@
         Save and Submit
       </button>-->
 
-      <button
-        type="button"
-        id="reset"
-        value="reset"
-        onclick="resetTask()"
-      >
-        Reset 
-      </button>
+    <button type="reset" class="clear-btn" id="reset" value="reset" onclick="resetTask()"> Clear Task List <button>
 
       <button
         type="button"
@@ -51,6 +43,6 @@
       </button>
     </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
   </body>
 </html>
