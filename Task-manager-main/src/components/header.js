@@ -1,4 +1,30 @@
+// import {} from 'firebase';
+import {auth, provider  } from './../firebase'
+import {signInWithPopup, signOut}from 'firebase/auth'
+
+
 function Header() {
+
+  const googleSignIn =(e) =>{
+    e.preventDefault();
+    signInWithPopup(auth, provider)
+    .then((result)=>{
+      console.log(`I'm logged ${result}`);
+    })
+    .catch((error) =>{
+      console.log(error.message);
+    })
+  }
+  
+  
+  const logOut =()=>{
+    signOut(auth).then(()=>{
+      console.log("I'm logged out");
+    }).catch((error)=>{
+      console.log(error.message);
+    });
+  };
+
 
   return (
   <div class="container">
@@ -28,9 +54,9 @@ function Header() {
 
         <div class="text-end">
           {/* <button type="button" class="btn btn-light text-dark me-2">Login</button> */}
-          <button onclick = "googleSignin()">Google Signin</button>
-          <button onclick = "googleSignout()">Google Signout</button>
-          <button type="button" class="btn btn-primary">Sign-up</button>
+          <button onClick={googleSignIn}> Sign in with Google</button>
+      <button onClick={logOut}>Log out</button>
+      
         </div>
       </div>
     </div>
