@@ -2,12 +2,12 @@
 <html>
   <head>
     <title>Task List</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body class>
-    <div class>
+  <body>
+    <div>
       <div>
     <header class="center">
         <h1>Task List</h1>
@@ -15,79 +15,25 @@
       </div>
 
     <!--taskList-->
-    <form class="form" ></form>
-      <ul class = "center">
-        <li>
-          <input type="checkbox" id="m_check1" name="check1" value="a"> 
-          <input type="text" name="item1" class="m_field">
-        </li>
-     
-        <li>
-          <input type="checkbox" id="m_check1" name="check1" value="a"> 
-          <input type="text" name="item1" class="m_field">
-        </li>
+    <ul class = "center">
+      <div class="container">
+        <form class="form" >
+        
+        <!-- <button type="submit"> Add Task </button> -->
 
-        <li>
-          <input type="checkbox" id="m_check1" name="check1" value="a"> 
-          <input type="text" name="item1" class="m_field">
-        </li>
+        <input autofocus type="text" placeholder="Add new task..." required/>
 
-        <li>
-          <input type="checkbox" id="m_check1" name="check1" value="a"> 
-          <input type="text" name="item1" class="m_field">
-        </li>
+      </form>
 
-        <li>
-          <p>Click on the reset button to reset the task list</p>
-          <input type="reset" value="Reset" onclick="resetTask()">
-          <input type="submit" value="Submit Task"  onclick="saveTask()">
-        </li>
+        <!--Save and Submit Button-->
+        <button type="button" id="save" value="save" onclick="saveTask()"> Save and Submit </button>
 
-      </ul>
-    </form>
-  </div>
-</div>
-
-<!-- <div id="teal-job-tracker-root-stable" style="z-index: 2147483647;"><iframe id="teal-job-tracker-iframe-stable" style="background: rgb(255, 255, 255); width: 380px; height: 100vh; position: fixed; inset: 0px -380px auto auto; z-index: 2147483647; border: 0px; box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 16px -3px; transition: right 0.25s ease-in-out 0s; transform: none;"></iframe></div>
-
-<manganum-sidebar style="z-index: 2147483647; pointer-events: none; position: fixed; height: 100%; left: 0px; top: 0px;"></manganum-sidebar>
-
-<div>
-  <div id="splitContent-popups"> </div>
-</div>
-
-<div id="teal-job-tracker-companion-root-stable" 
-class="ui-draggable" 
-style="display: block; z-index: 2147483646; bottom: 58px; right: 0px; position: fixed; height: 60px;">
-</div> -->
-
-
-<!-- 
-        <button type="submit"> Add Task </button>
-
-         <input autofocus type="text" placeholder="Add new task..." required/>-->
-
-          <!--Save and Submit Button-->
-          <!--<button type="button" id="save" value="save" onclick="saveTask()"> Save and Submit </button>-->
-
-          <!--Reset Button-->
-          <!--<button name="button" type="reset" class="resetTask" id="resetTask" value="reset" onclick="resetTask()"> Reset Task List </button>
-
-     </div> 
-        </form> -->
-    <!--</div>-->
-    <!--</ul>-->
-  
-    <!--buttons need functionality. another idea is to have a reset and delete by each task-->
-    <!-- <div class="button">
-
-      <button type="button" id="save" value="save" onclick="saveTask()"> Save and Submit </button> -->
-
-  <!-- <button type="reset" class="clear-btn" id="reset" value="reset" onclick="resetTask()"> Clear Task List </button>-->
-
-    <!--<button type="button" id="del" value="delete" onclick="deleteTask()"> Delete Tasks </button>-->
-
-   </div>
+        <!--Reset Button-->
+        <button name="button" type="reset" class="resetTask" id="resetTask" value="reset" onclick="resetTask()"> Reset Task List </button>
+        
+    </ul>
+      </div>
+    </div>
 
   <script src="script.js"></script>
   </body>
