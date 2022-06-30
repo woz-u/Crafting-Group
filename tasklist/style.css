@@ -15,7 +15,7 @@ body {
   line-height: 1.4;
 }
 
-.button {
+/* .button {
   background-color: aliceblue;
   text-align: center;
   display: flex;
@@ -26,7 +26,7 @@ body {
   margin: 80px;
   padding: 10px;
   width: 20%;
-}
+} */
 
 .center {
 	text-align: center;
