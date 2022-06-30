@@ -27,6 +27,31 @@ function Header() {
   return (
     
 <div className = "container" >
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar w/ text</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Future Features</a>
+        </li>
+      </ul>
+      <span class="navbar-text">
+      <button onClick={logOut}>Log out</button>
+      <button onClick={googleSignIn}> Sign in with Google</button>
+      </span>
+    </div>
+  </div>
+</nav>
     <header className="py-3 mb-3 border-bottom">
       <div className="container-fluid d-grid gap-3 align-items-center" >
         <div className="dropdown">
