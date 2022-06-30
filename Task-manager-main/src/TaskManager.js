@@ -22,14 +22,14 @@ function TaskManager() {
   },[])
 //controls the list page
   return (
-    <div name='taskManager'>
+    <div className='taskManager'>
       <header>Craft Project</header>
-      <div name='taskManager__container'>
+      <div className='taskManager__container'>
         <button 
           onClick={() => setOpenAddModal(true)}>
           Add task +
         </button>
-        <div name='taskManager__tasks'>
+        <div className='taskManager__tasks'>
 
           {tasks.map((task) => (
             <Task

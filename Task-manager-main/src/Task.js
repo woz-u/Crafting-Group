@@ -6,7 +6,7 @@ import { doc, updateDoc, deleteDoc} from "firebase/firestore";
 import {db} from './firebase'
 // import {HEADER, FOOTER, BREADCRUMB, PAGINATION, SIDENAV, SIGNINOUT} from '../components'
 
-function Task({id, title, budget, description, completed}) {
+function Task({id, title, budget, description, supplies, completed}) {
 
   const [checked, setChecked] = useState(completed)
   const [open, setOpen] = useState({edit:false, view:false})
@@ -38,31 +38,33 @@ function Task({id, title, budget, description, completed}) {
   }
 
   return (
-    <div name={`task ${checked && 'task--borderColor'}`}>
+    <div className={`task ${checked && 'task--borderColor'}`}>
       <div>
         <input 
           id={`checkbox-${id}`} 
-          name='checkbox-custom'
+          className='checkbox-custom'
           name="checkbox" 
           checked={checked}
           onChange={handleChange}
           type="checkbox" />
         <label 
           htmlFor={`checkbox-${id}`} 
-          name="checkbox-custom-label" 
+          className="checkbox-custom-label" 
           onClick={() => setChecked(!checked)} ></label>
       </div>
-      <div name='task__body'>
+      <div className='task__body'>
         <h2>{title}</h2>
         <p>{description}</p>
-        <div name='task__buttons'>
-          <div name='task__deleteNedit'>
+        <p>${budget}</p>
+        <p>{supplies}</p>
+        <div className='task__buttons'>
+          <div className='task__deleteNedit'>
             <button 
-              name='task__editButton' 
+              className='task__editButton' 
               onClick={() => setOpen({...open, edit : true})}>
               Edit
             </button>
-            <button name='task__deleteButton' onClick={handleDelete}>Delete</button>
+            <button className='task__deleteButton' onClick={handleDelete}>Delete</button>
           </div>
           <button 
             onClick={() => setOpen({...open, view: true})}>
@@ -77,6 +79,7 @@ function Task({id, title, budget, description, completed}) {
           title={title} 
           budget={budget} //<-- added
           description={description} 
+          supplies={supplies}
           open={open.view} />
       }
 
@@ -86,6 +89,7 @@ function Task({id, title, budget, description, completed}) {
           toEditTitle={title} 
           toEditBudget={budget} // --< added
           toEditDescription={description} 
+          toEditSupplies={supplies}
           open={open.edit}
           id={id} />
       }
