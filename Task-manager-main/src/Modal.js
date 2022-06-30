@@ -11,7 +11,7 @@ function Modal({open, modalLabel, children, custom_modal, onClose}) {
 
   if(open) {
     return (
-      <div className='modalContainer' onClick={handleClose}>
+      <div className="modal-dialog modal-dialog-scrollable modalContainer" onClick={handleClose}>
         <div className= {`modal ${custom_modal}`}>
           <div className='modal__head'>
             <h2>{modalLabel}</h2>

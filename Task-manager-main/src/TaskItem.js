@@ -2,7 +2,7 @@ import Modal from "./Modal"
 import './taskItem.css'
 // import {HEADER, FOOTER, BREADCRUMB, PAGINATION, SIDENAV, SIGNINOUT} from '../components'
 
-function TaskItem({onClose, open, title, budget, description}) {
+function TaskItem({onClose, open, title, budget, description, supplies}) {
 //added budget
   return (
     <Modal modalLabel='Project' onClose={onClose} open={open}>
@@ -10,6 +10,7 @@ function TaskItem({onClose, open, title, budget, description}) {
         <h2>{title}</h2>
         <p>{description}</p>
         <p>${budget}</p>
+        <p>{supplies}</p>
       </div>
     </Modal>
   )

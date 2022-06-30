@@ -6,7 +6,7 @@ import { doc, updateDoc, deleteDoc} from "firebase/firestore";
 import {db} from './firebase'
 // import {HEADER, FOOTER, BREADCRUMB, PAGINATION, SIDENAV, SIGNINOUT} from '../components'
 
-function Task({id, title, budget, description, completed}) {
+function Task({id, title, budget, description, supplies, completed}) {
 
   const [checked, setChecked] = useState(completed)
   const [open, setOpen] = useState({edit:false, view:false})
@@ -55,6 +55,8 @@ function Task({id, title, budget, description, completed}) {
       <div className='task__body'>
         <h2>{title}</h2>
         <p>{description}</p>
+        <p>${budget}</p>
+        <p>{supplies}</p>
         <div className='task__buttons'>
           <div className='task__deleteNedit'>
             <button 
@@ -77,6 +79,7 @@ function Task({id, title, budget, description, completed}) {
           title={title} 
           budget={budget} //<-- added
           description={description} 
+          supplies={supplies}
           open={open.view} />
       }
 
@@ -86,6 +89,7 @@ function Task({id, title, budget, description, completed}) {
           toEditTitle={title} 
           toEditBudget={budget} // --< added
           toEditDescription={description} 
+          toEditSupplies={supplies}
           open={open.edit}
           id={id} />
       }

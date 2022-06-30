@@ -1,68 +1,52 @@
 // import {} from 'firebase';
-import {auth, provider  } from './../firebase'
-import {signInWithPopup, signOut}from 'firebase/auth'
+import { auth, provider } from './../firebase'
+import { signInWithPopup, signOut } from 'firebase/auth'
 
 function Header() {
 
-  const googleSignIn =(e) =>{
+  const googleSignIn = (e) => {
     e.preventDefault();
     signInWithPopup(auth, provider)
-    .then((result)=>{
-      console.log(`I'm logged ${result}`);
-    })
-    .catch((error) =>{
-      console.log(error.message);
-    })
+      .then((result) => {
+        console.log(`I'm logged ${result}`);
+      })
+      .catch((error) => {
+        console.log(error.message);
+      })
   }
-    
-  const logOut =()=>{
-    signOut(auth).then(()=>{
+
+  const logOut = () => {
+    signOut(auth).then(() => {
       console.log("I'm logged out");
-    }).catch((error)=>{
+    }).catch((error) => {
       console.log(error.message);
     });
   };
 
 
   return (
-  <div class="container">
-    <div class="px-3 py-2 bg-dark text-white">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"></svg>
+    
+<div className = "container" >
+    <header className="py-3 mb-3 border-bottom">
+      <div className="container-fluid d-grid gap-3 align-items-center" >
+        <div className="dropdown">
+          <a href="#" className="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle" id="dropdownNavLink" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg className="bi me-2" width="40" height="32"></svg>
           </a>
-
-          <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-            <li>
-            <a href="#">Home</a>
-            
-            </li>
-            <li><a href="#">Dash</a>
-                         </li>
-                     </ul>
+          <ul className="dropdown-menu text-small shadow" aria-labelledby="dropdownNavLink">
+            <li className="dropdown-item active"  aria-current="page">Overview</li>
+            <li className="dropdown-item" >Projects</li>
+            <li className="dropdown-item" >Shopping</li>
+            <li className="dropdown-item" >Stash</li>
+           <li><button onClick={logOut}>Log out</button></li>
+           <li><button onClick={googleSignIn}> Sign in with Google</button></li>
+          </ul>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="px-3 py-2 border-bottom mb-3">
-      <div class="container d-flex flex-wrap justify-content-center">
-        <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
-          <input type="search" class="form-control" placeholder="Search..." aria-label="Search" />
-        </form>
-
-        <div class="text-end">
-          {/* <button type="button" class="btn btn-light text-dark me-2">Login</button> */}
-          <button onClick={googleSignIn}> Sign in with Google</button>
-      <button onClick={logOut}>Log out</button>
-      
-        </div>
-      </div>
-    </div>
-  </div>
-  
+     </header>
+</div>
+ 
   );
-          }
-  export default Header
-  //needs the logic for routing pages
-  //needs search logic
-  //needs signin/out via google logic here?
+}
+
+export default Header
