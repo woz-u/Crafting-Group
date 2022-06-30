@@ -42,7 +42,7 @@ function AddTask({onClose, open}) {
           placeholder='Enter task description'
           value={description}></textarea>
           <label>Supply List</label>
-          **want a repeating single box to enter each item into & have an updating list. How do we make it scroll? CSS?
+          **want a repeating single box to enter each item into & have an updating list. Adding the potential for uploading a pic. (addTask shows on modal)
           <input type='text' name='supply' onChange={(e) => setSupply(e.target.value)} 
           value={title} placeholder='Enter Items Needed'/>     
           <button type='submit'>Done</button>

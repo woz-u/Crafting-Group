@@ -24,10 +24,13 @@ function TaskManager() {
   return (
     <div className='taskManager'>
       <header>Craft Project</header>
+MENU GOES HERE!!
+
+
       <div className='taskManager__container'>
         <button 
           onClick={() => setOpenAddModal(true)}>
-          Add task +
+          Add Project +
         </button>
         <div className='taskManager__tasks'>
 
