@@ -4,6 +4,7 @@ import TaskItem from './TaskItem'
 import EditTask from './EditTask'
 import { doc, updateDoc, deleteDoc} from "firebase/firestore";
 import {db} from './firebase'
+import * as React from 'react';
 // import {HEADER, FOOTER, BREADCRUMB, PAGINATION, SIDENAV, SIGNINOUT} from '../components'
 
 function Task({id, title, budget, description, supplies, completed}) {

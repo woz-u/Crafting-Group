@@ -1,6 +1,8 @@
 // import {} from 'firebase';
+import * as React from 'react';
 import { auth, provider } from './../firebase'
 import { signInWithPopup, signOut } from 'firebase/auth'
+import {Link} from 'react-router-dom';
 
 function Header() {
 
@@ -23,36 +25,35 @@ function Header() {
     });
   };
 
-  return (
-  
+  // const Router = ('link') did this 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">REPLACE WITH LOGO Crafting Project Manager (Task-manager-main/src/components/header.js/</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+  return (
+<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div className="container-fluid">
+  {/* <Link to="/index" className="navbar-brand" >REPLACE WITH LOGO Crafting Project Manager (Task-manager-main/src/components/header.js/</Link> */}
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Projects</a>
+    <div className="collapse navbar-collapse" id="navbarText">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+        <Link to="/index" className="nav-link active" aria-current="page" >Project Dashboard</Link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="features">Future Features</a>
+        <li className="nav-item">
+        <Link to="/about" className="nav-link">About</Link>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about">About</a>
+        <li className="nav-item">
+          <Link to="/about" className="nav-link">About</Link>
         </li>
       </ul>
-      <span class="navbar-text m-2">
-        <button class="btn btn-primary mr-3" onClick={googleSignIn}> Sign in with Google</button>
-        <button class="btn btn-primary ml-3" onClick={logOut}>Log out</button>
+   
+      <span class="navbar-text ">
+        <button class="btn btn-primary " onClick={googleSignIn}> Sign in with Google</button>
+        <button class="btn btn-primary " onClick={logOut}>Log out</button>
               </span>
     </div>
- 
  </div>
  </nav>
- 
  );
   }
 
