@@ -8,7 +8,7 @@ function TaskItem({onClose, open, title, budget, description, supplies}) {
     <Modal modalLabel='Project' onClose={onClose} open={open}>
       <div className='taskItem'>
         <h2>{title}</h2>
-        <p>TaskItem.js</p>
+        <p>Image on taskItem?view item</p>
         <p>{description}</p>
         <p>${budget}</p>
         <p>{supplies}</p>

@@ -1,16 +1,15 @@
 import './App.css';
-import Home from './TaskManager'
 import Header from './components/header'
 import Footer from './components/footer'
-function App() {
+function features() {
   return (
    
-    <div className='app'>
+    <div className='features'>
       <Header />
-      <Home />
+  
       <Footer />
     </div>
   );
 }
 
-export default App;
+export default features;

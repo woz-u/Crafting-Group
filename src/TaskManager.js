@@ -23,7 +23,7 @@ function TaskManager() {
 //controls the list page
   return (
     <div className='taskManager'>
-      <header>Craft Project Manager (task-manager-main/src/TaskManager.js)</header>
+      <header>Craft Project (src/TaskManager.js)</header>
       <div className='taskManager__container'>
         <button 
           onClick={() => setOpenAddModal(true)}>

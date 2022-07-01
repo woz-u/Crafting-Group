@@ -54,7 +54,7 @@ function Task({id, title, budget, description, supplies, completed}) {
       </div>
       <div className='task__body'>
         <h2>{title}</h2>
-        <p>Task.js</p>
+        <p>main page?</p>
         <p>{description}</p>
         <p>${budget}</p>
         <p>{supplies}</p>
