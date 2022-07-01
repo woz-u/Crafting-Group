@@ -8,13 +8,13 @@ function TaskItem({onClose, open, title, budget, description, supplies}) {
     <Modal modalLabel='Project' onClose={onClose} open={open}>
       <div className='taskItem'>
         <h2>{title}</h2>
-        <p>Image on taskItem?view item</p>
+        <p>TaskItem.js</p>
         <p>{description}</p>
         <p>${budget}</p>
         <p>{supplies}</p>
       </div>
       
-      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      {/* <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
@@ -46,7 +46,7 @@ function TaskItem({onClose, open, title, budget, description, supplies}) {
     </div>
   </div>
 </div>
-<a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a>
+<a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Open first modal</a> */}
       
       
       

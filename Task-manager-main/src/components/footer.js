@@ -9,7 +9,7 @@ function Footer() {
         <li className="nav-item nav-link px-2 text-muted">FAQs</li>
         <li className="nav-item nav-link px-2 text-muted">About</li>
       </ul>
-      <p className="text-center text-muted">Copyright &copy; 2022 Sue Darby, Stacie Wyatt, &amp; Devine Sims, Inc</p>
+      <p className="text-center text-muted">Copyright &copy; 2022 Sue Darby, Stacie Wyatt, &amp; Devine Sims, Inc. (footer.js)</p>
     </footer>
   </div>
   )
