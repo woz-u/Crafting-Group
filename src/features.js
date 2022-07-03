@@ -1,17 +1,9 @@
-import './App.css';
-import Header from './components/header'
-import Footer from './components/footer'
-import * as eact from 'react';
+import React from 'react';
 
-function features() {
-  return (
-   
-    <div className='features'>
-      <Header />
-  
-      <Footer />
-    </div>
-  );
-}
+const Features = () => (
+  <div>
+    <h2>Features</h2>
+  </div>
+);
 
-export default features;
+export default Features;
