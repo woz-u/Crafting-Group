@@ -5,10 +5,10 @@
 // }
 
 //Save and Submit Button
-function saveTask(saveTask) {
-  alert("This task will be saved and submitted...");
-  document.getElementById("button").saveTask;
- }
+// function saveTask(saveTask) {
+//   alert("This task will be saved and submitted...");
+//   document.getElementById("button").saveTask;
+//  }
 
 //Reset Button
 
@@ -44,11 +44,6 @@ function saveTask(saveTask) {
 // });
 
 //possible trash can by each task. 
-
-
-
-
-
 
  //borrowed code goes below this line//
  // On app load, get all tasks from localStorage

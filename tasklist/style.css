@@ -28,21 +28,20 @@ body {
   width: 20%;
 } */
 
-.center {
+ 
+
+.center {/*header and form */
 	text-align: center;
 }
 
-
-.app {
-	width: 60%;
-}
 
 @media (max-width:768px){
 	.app {
 		width: 90%
 	}
 }
-.app h1 {
+
+.app h1 {/*task list name */
 font-family: 'Times New Roman', Times, serif;
 text-align: center;
 padding: 10px
@@ -50,9 +49,10 @@ padding: 10px
 
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap");
 
-.app form {
+.app form {/*form */
   display: flex;
   width: 100%;
+  justify-content: space-between;
   background-color: aliceblue;
 }
 
@@ -65,8 +65,14 @@ padding: 10px
   width: 20%;
 }
 
+form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
 .app ul {
-  list-style: none;
+  list-style: none; 
   color: black;
   padding:  10px;
 }
@@ -88,9 +94,9 @@ html {
   padding-left: 10px;
   padding-right: 10px;
   color: #333;
-  height: 90vh;
-  margin-top: 5vh;
-  margin-bottom: 5vh;
+  height: 90px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   overflow-y: auto;
 }
 
@@ -121,15 +127,9 @@ input[type="checkbox"] {
   pointer-events: none;
 }
 
-form {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
 input[type="text"] {
   width: 100%;
   padding: 10px;
   border-radius: 4px;
-  border: 3px solid #333;
+  border: 2px solid #333;
 }
