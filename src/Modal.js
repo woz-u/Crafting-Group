@@ -1,4 +1,4 @@
-import './modal.css'
+import './modal.css';
 import * as React from 'react';
 
 function Modal({open, modalLabel, children, custom_modal, onClose}) {
@@ -12,7 +12,7 @@ function Modal({open, modalLabel, children, custom_modal, onClose}) {
 
   if(open) {
     return (
-      <div className="modal-dialog modal-dialog-scrollable modalContainer" onClick={handleClose}>
+      <div className='modalContainer' onClick={handleClose}>
         <div className= {`modal ${custom_modal}`}>
           <div className='modal__head'>
             <h2>{modalLabel}</h2>
@@ -25,5 +25,4 @@ function Modal({open, modalLabel, children, custom_modal, onClose}) {
   }
   return null
 }
-
 export default Modal
