@@ -1,22 +1,20 @@
-import './task.css';
-import {useState} from 'react';
-import * as React from 'react';
-import TaskItem from './TaskItem';
-import EditTask from './EditTask';
+import './task.css'
+import {useState} from 'react'
+import TaskItem from './TaskItem'
+import EditTask from './EditTask'
 import { doc, updateDoc, deleteDoc} from "firebase/firestore";
-import {db} from './firebase';
+import {db} from './firebase'
 
-function Task({id, title, description, completed}) {
-
+function Task(
+  {id, title, budget, description, supplies, completed}) {
   const [checked, setChecked] = useState(completed)
   const [open, setOpen] = useState({edit:false, view:false})
-
   const handleClose = () => {
     setOpen({edit:false, view:false})
   }
 
-  /* function to update firestore */
-  const handleChange = async () => {
+   /* function to update firestore */
+   const handleChange = async () => {
     const taskDocRef = doc(db, 'tasks', id)
     try{
       await updateDoc(taskDocRef, {
@@ -26,7 +24,6 @@ function Task({id, title, description, completed}) {
       alert(err)
     }
   }
-
   /* function to delete a document from firstore */ 
   const handleDelete = async () => {
     const taskDocRef = doc(db, 'tasks', id)
@@ -36,7 +33,6 @@ function Task({id, title, description, completed}) {
       alert(err)
     }
   }
-
   return (
     <div>
     <div className={`task ${checked && 'task--borderColor'}`}>
