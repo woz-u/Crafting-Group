@@ -17,5 +17,3 @@ function Footer() {
   )
 };
   export default Footer
-  //needs routing logic same as header
-  //needs date() function for copyright year

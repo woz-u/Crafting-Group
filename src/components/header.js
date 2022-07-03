@@ -1,8 +1,8 @@
 // import {} from 'firebase';
+import './../App.css';
 import * as React from 'react';
 import { auth, provider } from './../firebase'
 import { signInWithPopup, signOut } from 'firebase/auth'
-import {Link} from 'react-router-dom';
 
 function Header() {
 
@@ -23,38 +23,42 @@ function Header() {
     }).catch((error) => {
       console.log(error.message);
     });
+ 
   };
 
-  // const Router = ('link') did this 
-
   return (
-<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div className="container-fluid">
-  {/* <Link to="/index" className="navbar-brand" >REPLACE WITH LOGO Crafting Project Manager (Task-manager-main/src/components/header.js/</Link> */}
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
+    <div>
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+  {/* <Link to="./home" className="navbar-brand" >REPLACE WITH LOGO Crafting Project Manager (src/components/header.js/</Link> */}
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div className="collapse navbar-collapse" id="navbarText">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-        <Link to="/index" className="nav-link active" aria-current="page" >Project Dashboard</Link>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+        {/* <Link to="./index" className="nav-link active" aria-current="page" >Project Dashboard</Link> */}
         </li>
-        <li className="nav-item">
-        <Link to="/about" className="nav-link">About</Link>
+        <li class="nav-item">
+        {/* <Link to="./features" className="nav-link">Features</Link> */}
         </li>
-        <li className="nav-item">
-          <Link to="/about" className="nav-link">About</Link>
+        <li class="nav-item">
+        {/* <Link to="./about" className="nav-link">About</Link> */}
         </li>
       </ul>
-   
-      <span class="navbar-text ">
+    </div>
+  </div>
+
+
+
+    <span class="navbar-text ">
         <button class="btn btn-primary " onClick={googleSignIn}> Sign in with Google</button>
         <button class="btn btn-primary " onClick={logOut}>Log out</button>
-              </span>
-    </div>
- </div>
- </nav>
- );
+    </span>
+    </nav> 
+      </div>
+
+    );
   }
 
 export default Header
