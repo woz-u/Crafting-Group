@@ -1,20 +1,16 @@
-import './task.css';
-import {useState} from 'react';
-import * as React from 'react';
-import TaskItem from './TaskItem';
-import EditTask from './EditTask';
+import './task.css'
+import React, {useState} from 'react'
+import TaskItem from './TaskItem'
+import EditTask from './EditTask'
 import { doc, updateDoc, deleteDoc} from "firebase/firestore";
-import {db} from './firebase';
-
-function Task({id, title, description, completed}) {
-
+import {db} from './firebase'
+// import {HEADER, FOOTER, BREADCRUMB, PAGINATION, SIDENAV, SIGNINOUT} from '../components'
+function Task({id, title, budget, description, completed}) {
   const [checked, setChecked] = useState(completed)
   const [open, setOpen] = useState({edit:false, view:false})
-
   const handleClose = () => {
     setOpen({edit:false, view:false})
   }
-
   /* function to update firestore */
   const handleChange = async () => {
     const taskDocRef = doc(db, 'tasks', id)
@@ -26,7 +22,6 @@ function Task({id, title, description, completed}) {
       alert(err)
     }
   }
-
   /* function to delete a document from firstore */ 
   const handleDelete = async () => {
     const taskDocRef = doc(db, 'tasks', id)
@@ -36,9 +31,7 @@ function Task({id, title, description, completed}) {
       alert(err)
     }
   }
-
   return (
-    <div>
     <div className={`task ${checked && 'task--borderColor'}`}>
       <div>
         <input 
@@ -71,24 +64,23 @@ function Task({id, title, description, completed}) {
           </button>
         </div>
       </div>
-
       {open.view &&
         <TaskItem 
           onClose={handleClose} 
           title={title} 
+          budget={budget} //<-- added
           description={description} 
           open={open.view} />
       }
-
       {open.edit &&
         <EditTask 
           onClose={handleClose} 
           toEditTitle={title} 
+          toEditBudget={budget} // --< added
           toEditDescription={description} 
           open={open.edit}
           id={id} />
       }
-    </div>
     </div>
   )
 }
