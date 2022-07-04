@@ -4,7 +4,8 @@ import TaskItem from './TaskItem'
 import EditTask from './EditTask'
 import { doc, updateDoc, deleteDoc} from "firebase/firestore";
 import {db} from './firebase'
-// import {HEADER, FOOTER, BREADCRUMB, PAGINATION, SIDENAV, SIGNINOUT} from '../components'
+
+
 function Task({id, title, budget, description, completed}) {
   const [checked, setChecked] = useState(completed)
   const [open, setOpen] = useState({edit:false, view:false})
@@ -32,7 +33,7 @@ function Task({id, title, budget, description, completed}) {
     }
   }
   return (
-    <div className={`task ${checked && 'task--borderColor'}`}>
+<div className={`task ${checked && 'task--borderColor'}`}>
       <div>
         <input 
           id={`checkbox-${id}`} 
@@ -49,6 +50,7 @@ function Task({id, title, budget, description, completed}) {
       <div className='task__body'>
         <h2>{title}</h2>
         <p>{description}</p>
+        <p>${budget}</p>
         <div className='task__buttons'>
           <div className='task__deleteNedit'>
             <button 
@@ -64,6 +66,9 @@ function Task({id, title, budget, description, completed}) {
           </button>
         </div>
       </div>
+
+
+
       {open.view &&
         <TaskItem 
           onClose={handleClose} 

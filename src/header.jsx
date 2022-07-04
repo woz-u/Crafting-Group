@@ -2,6 +2,7 @@
 import {auth, provider  } from './firebase'
 import {signInWithPopup, signOut}from 'firebase/auth'
 import React from 'react';
+
 function Header() {
 
   const googleSignIn =(e) =>{

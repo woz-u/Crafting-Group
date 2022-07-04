@@ -1,6 +1,7 @@
 import './App.css';
 import Home from './TaskManager'
 import Header from './header'
+import Footer from './footer'
 import React from 'react'
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
     <div className='app'>
     <Header />
     <Home />
-    
+    <Footer />
     </div>
   );
 }
