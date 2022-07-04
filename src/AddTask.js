@@ -1,10 +1,8 @@
 import Modal from "./Modal"
-import React from 'react'
-import {useState} from 'react'
+import React, {useState} from 'react'
 import './addTask.css'
 import {db} from './firebase'
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
-
 
 // import header from '../components/header'
 function AddTask({onClose, open}) {
@@ -12,6 +10,7 @@ function AddTask({onClose, open}) {
   const [budget, setBudget] = useState('') // <-- added
   const [supply, setSupply] = useState('') // <-- added
   const [description, setDescription] = useState('')
+
   /* function to add new task to firestore */
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -29,6 +28,7 @@ function AddTask({onClose, open}) {
       alert(err)
     }
   }
+
 //added budget
   return (
     <Modal modalLabel='Add Project' onClose={onClose} open={open}>

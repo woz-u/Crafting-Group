@@ -1,20 +1,17 @@
 import './App.css';
-import './index.css';
-import React from 'react';
-
+import Home from './TaskManager'
 import Header from './components/header'
-import Footer from './components/footer'
-
-import Home from './home';
-
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 function App() {
+
   return (
-   
+
     <div className='app'>
-      <Header />
-      <Home />
-      <Footer />
+    <Header />
+    <Home />
+    
     </div>
   );
 }
