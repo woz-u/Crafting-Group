@@ -1,8 +1,7 @@
 import './App.css';
 import Home from './TaskManager'
-import Header from './components/header'
+import Header from './header'
 import React from 'react'
-import ReactDOM from 'react-dom'
 
 function App() {
 
