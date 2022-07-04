@@ -1,26 +1,31 @@
 import ReactDOM from 'react-dom';
-import './index.css';
-
-import App from './App';
 import React from 'react';
+import './index.css';
 import Home from './home';
 import About from './about';
 import Features from './features';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import TaskManager from './TaskManager';
+import './App.css';
 
-// ReactDOM.render(
-  // <React.StrictMode>
-    const Routes = () => (
-<Router>
-    <div>
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/features" component={Features} />
-    </div>
-  </Router>
-    );
-    export default Routes
-// </React.StrictMode>,
-ReactDOM.render(<App />, document.getElementById('root'));
+const Index = ({ pathname }) => {
+  switch (pathname) {
+    case '/about':
+      return <About />;
+    case '/features':
+      return <Features />;
+    case '/home':
+      return <Home />  
+    default:
+      return <TaskManager />;
+  }};
 
+
+let pathname = window.location.pathname;
+
+ReactDOM.render(<Index pathname={pathname} />, document.getElementById('root'));
+
+window.addEventListener('popstate', () => {
+  pathname = window.location.pathname;
+});
+export default Index;
 

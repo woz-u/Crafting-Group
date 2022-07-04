@@ -4,17 +4,20 @@ import TaskItem from './TaskItem'
 import EditTask from './EditTask'
 import { doc, updateDoc, deleteDoc} from "firebase/firestore";
 import {db} from './firebase'
+import * as React from 'react';
+// import {HEADER, FOOTER, BREADCRUMB, PAGINATION, SIDENAV, SIGNINOUT} from '../components'
 
-function Task(
-  {id, title, budget, description, supplies, completed}) {
+function Task({id, title, budget, description, supplies, completed}) {
+
   const [checked, setChecked] = useState(completed)
   const [open, setOpen] = useState({edit:false, view:false})
+
   const handleClose = () => {
     setOpen({edit:false, view:false})
   }
 
-   /* function to update firestore */
-   const handleChange = async () => {
+  /* function to update firestore */
+  const handleChange = async () => {
     const taskDocRef = doc(db, 'tasks', id)
     try{
       await updateDoc(taskDocRef, {
@@ -24,6 +27,7 @@ function Task(
       alert(err)
     }
   }
+
   /* function to delete a document from firstore */ 
   const handleDelete = async () => {
     const taskDocRef = doc(db, 'tasks', id)
@@ -33,8 +37,8 @@ function Task(
       alert(err)
     }
   }
+
   return (
-    <div>
     <div className={`task ${checked && 'task--borderColor'}`}>
       <div>
         <input 
@@ -51,7 +55,10 @@ function Task(
       </div>
       <div className='task__body'>
         <h2>{title}</h2>
+        <p>main page?</p>
         <p>{description}</p>
+        <p>${budget}</p>
+        <p>{supplies}</p>
         <div className='task__buttons'>
           <div className='task__deleteNedit'>
             <button 
@@ -72,7 +79,9 @@ function Task(
         <TaskItem 
           onClose={handleClose} 
           title={title} 
+          budget={budget} //<-- added
           description={description} 
+          supplies={supplies}
           open={open.view} />
       }
 
@@ -80,11 +89,13 @@ function Task(
         <EditTask 
           onClose={handleClose} 
           toEditTitle={title} 
+          toEditBudget={budget} // --< added
           toEditDescription={description} 
+          toEditSupplies={supplies}
           open={open.edit}
           id={id} />
       }
-    </div>
+
     </div>
   )
 }

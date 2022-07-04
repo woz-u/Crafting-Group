@@ -1,6 +1,7 @@
-import Modal from "./Modal";
-import './taskItem.css';
-import React from 'react';
+import Modal from "./Modal"
+import './taskItem.css'
+import * as React from 'react';
+// import {HEADER, FOOTER, BREADCRUMB, PAGINATION, SIDENAV, SIGNINOUT} from '../components'
 
 function TaskItem({onClose, open, title, budget, description, supplies}) {
 //added budget
@@ -13,6 +14,13 @@ function TaskItem({onClose, open, title, budget, description, supplies}) {
         <p>${budget}</p>
         <p>{supplies}</p>
       </div>
+      
+
+      
+      
+      
+  
+
       
     </Modal>
   )

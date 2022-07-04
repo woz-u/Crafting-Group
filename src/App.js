@@ -1,10 +1,16 @@
 import './App.css';
-import Home from './TaskManager'
+import './index.css';
+import React from 'react';
+
 import Header from './components/header'
 import Footer from './components/footer'
+
+import Home from './home';
+
+
 function App() {
   return (
-
+   
     <div className='app'>
       <Header />
       <Home />
@@ -12,4 +18,5 @@ function App() {
     </div>
   );
 }
+
 export default App;

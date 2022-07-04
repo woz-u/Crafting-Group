@@ -1,10 +1,15 @@
 import './taskManager.css'
-import Task from './Task'
+import './index.css';
+import './App.css';
+
+import React from 'react';
 import {useState, useEffect} from 'react'
 import {collection, query, orderBy, onSnapshot} from "firebase/firestore"
 import {db} from './firebase'
+
+import Header from './components/header'
+import Task from './Task'
 import AddTask from './AddTask'
-import React from 'react';
 
 function TaskManager() {
 
@@ -24,7 +29,7 @@ function TaskManager() {
 //controls the list page
   return (
     <div className='taskManager'>
-      <header>Craft Project (src/TaskManager.js)</header>
+      <header> <Header />Craft Project (src/TaskManager.js)</header>
       <div className='taskManager__container'>
         <button 
           onClick={() => setOpenAddModal(true)}>

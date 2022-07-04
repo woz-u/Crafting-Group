@@ -1,16 +1,17 @@
-import Modal from './Modal';
-import * as React from 'react';
-import useState from 'react';
-import './addTask.css';
-import {db} from './firebase';
-import {collection, addDoc, Timestamp} from 'firebase/firestore';
+import Modal from "./Modal"
+import React from 'react'
+import {useState} from 'react'
+import './addTask.css'
+import {db} from './firebase'
+import {collection, addDoc, Timestamp} from 'firebase/firestore'
 
+
+// import header from '../components/header'
 function AddTask({onClose, open}) {
-
   const [title, setTitle] = useState('')
-  const [description, setDescription] = useState('') //adding a new supply item may move to secondary modal
-    const [budget, setBudget] = useState('') // <-- added
-
+  const [budget, setBudget] = useState('') // <-- added
+  const [supply, setSupply] = useState('') // <-- added
+  const [description, setDescription] = useState('')
   /* function to add new task to firestore */
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -19,6 +20,7 @@ function AddTask({onClose, open}) {
         title: title,
         description: description,
         budget: budget, // <--added this
+        supply: supply, // <-- added
         completed: false,
         created: Timestamp.now()
       })
@@ -27,9 +29,9 @@ function AddTask({onClose, open}) {
       alert(err)
     }
   }
-    //added budget
-    return (
-      <Modal modalLabel='Add Craft Project' onClose={onClose} open={open}>
+//added budget
+  return (
+    <Modal modalLabel='Add Project' onClose={onClose} open={open}>
       <form onSubmit={handleSubmit} className='addTask' name='addTask'>
         <input type='text' name='title' onChange={(e) => setTitle(e.target.value.toUpperCase())} 
           value={title} placeholder='Enter title'/>
@@ -39,11 +41,14 @@ function AddTask({onClose, open}) {
           onChange={(e) => setDescription(e.target.value)}
           placeholder='Enter task description'
           value={description}></textarea>
-                   
-        <button type='submit'>Done</button>
+          <label>Supply List</label>
+          **want a repeating single box to enter each item into & have an updating list. How do we make it scroll? CSS?
+          <input type='text' name='supply' onChange={(e) => setSupply(e.target.value)} 
+          value={title} placeholder='Enter Items Needed'/>     
+          <button type='submit'>Done</button>
       </form> 
     </Modal>
-      )
-    };
+  )
+}
 
 export default AddTask
