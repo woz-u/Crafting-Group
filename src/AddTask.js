@@ -6,9 +6,9 @@ import {collection, addDoc, Timestamp} from 'firebase/firestore'
 
 // import header from '../components/header'
 function AddTask({onClose, open}) {
+
   const [title, setTitle] = useState('')
   const [budget, setBudget] = useState('') // <-- added
-  const [supply, setSupply] = useState('') // <-- added
   const [description, setDescription] = useState('')
 
   /* function to add new task to firestore */
@@ -19,7 +19,6 @@ function AddTask({onClose, open}) {
         title: title,
         description: description,
         budget: budget, // <--added this
-        supply: supply, // <-- added
         completed: false,
         created: Timestamp.now()
       })
@@ -41,11 +40,7 @@ function AddTask({onClose, open}) {
           onChange={(e) => setDescription(e.target.value)}
           placeholder='Enter task description'
           value={description}></textarea>
-          <label>Supply List</label>
-          **want a repeating single box to enter each item into & have an updating list. How do we make it scroll? CSS?
-          <input type='text' name='supply' onChange={(e) => setSupply(e.target.value)} 
-          value={title} placeholder='Enter Items Needed'/>     
-          <button type='submit'>Done</button>
+        <button type='submit'>Done</button>
       </form> 
     </Modal>
   )

@@ -1,8 +1,8 @@
 import './App.css';
 import Home from './TaskManager'
-import Header from './components/header'
+import Header from './header'
+import Footer from './footer'
 import React from 'react'
-import ReactDOM from 'react-dom'
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
     <div className='app'>
     <Header />
     <Home />
-    
+    <Footer />
     </div>
   );
 }
