@@ -7,6 +7,15 @@ function Header() {
 
   const googleSignIn =(e) =>{
 
+    
+          
+            
+    
+
+          
+    
+    
+  
       e.preventDefault();
     signInWithPopup(auth, provider)
     .then((result)=>{
@@ -16,11 +25,9 @@ function Header() {
       console.log(error.message);
     })
   }
-
   const logOut =()=>{
     signOut(auth).then(()=>{
       console.log("I'm logged out");
-
     }).catch((error)=>{
       console.log(error.message);
     });
@@ -68,7 +75,6 @@ function Header() {
           <form className="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto" id='search'>
             <input type="search" className="form-control" placeholder="Search..." aria-label="Search" />
           </form>
-
           <div class="text-end">
           {/* <button type="button" class="btn btn-light text-dark me-2">Login</button> */}
           <button onClick={googleSignIn}> Sign in with Google</button>
