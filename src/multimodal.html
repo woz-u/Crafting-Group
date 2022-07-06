@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="multimodal.css">
+
+    </head>
+<body>
+
+
+<div class="alert alert-info">
+    Boostrap Multi-Page Modal - Each <br><code>&lt;div class=&quot;modal-split&quot;&gt;&lt;/div&gt;</code> <br>Declaration is a page. 
+  </div>
+
+<!-- Button trigger modal -->
+<div class="button">
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      
+      </div>
+      
+      <div class="modal-body">
+	  
+        <div class="modal-split">
+		1 <code>&lt;div class=&quot;modal-split&quot;&gt; Page 1 content goes here &lt;/div&gt;</code>
+        <form>
+            <input type="text" placeholder="modal 1">
+            <button type="submit">Save project</button>
+        </form>
+		</div>
+		
+		<div class="modal-split">
+		2 <code>&lt;div class=&quot;modal-split&quot;&gt; Page 2 content goes here &lt;/div&gt;</code>
+        <form>
+            <input type="text" placeholder="modal 2">
+            <button type="submit">Save Supplies</button>
+
+        </form>
+		</div>
+		
+		<div class="modal-split">
+		3 <code>&lt;div class=&quot;modal-split&quot;&gt; and so on  &lt;/div&gt;</code>
+        <form>
+            <input type="text" placeholder="modal 3">
+            <button type="submit">Save Locations & Tags</button>
+
+        </form>
+		</div>	
+
+      </div>
+
+      <div class="modal-footer">
+ <!--Nothing Goes Here but is needed! -->
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- <div class="alert alert-info">
+   EX: (These divs go in the modal-body) <br><code>&lt;div class=&quot;modal-split&quot;&gt; Page 1 content goes here &lt;/div&gt;<br>&lt;div class=&quot;modal-split&quot;&gt; Page 2 content goes here &lt;/div&gt;<br>&lt;div class=&quot;modal-split&quot;&gt; and so on  &lt;/div&gt;</code>
+  </div> -->
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+  
+  <script src="multimodal.js"></script>
+
+
+</body>
+</html>
