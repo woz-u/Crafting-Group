@@ -7,32 +7,32 @@
 //   </head>
 
 //   <body>
-    <div>
-      <div>
-    <header className="center">
-        <h1>Stash List</h1>
-    </header>
-      </div>
+  //   <div>
+  //     <div>
+  //   <header className="center">
+  //       <h1>Stash List</h1>
+  //   </header>
+  //     </div>
 
-    {/* <!--taskList--> */}
-    <ul className = "center">
-      <div className="container">
-        <form className="form" >
+  //   {/* <!--taskList--> */}
+  //   <ul className = "center">
+  //     <div className="container">
+  //       <form className="form" >
         
-        <input autofocus type="text" placeholder="Add new task..." required/>
+  //       <input autofocus type="text" placeholder="Add new task..." required/>
 
-      </form>
+  //     </form>
 
-        {/* <!-- Save and Submit Button */}
-        <button type="button" id="save" value="save" onclick="saveTask()"> Save and Submit </button>-->
+  //       {/* <!-- Save and Submit Button */}
+  //       <button type="button" id="save" value="save" onclick="saveTask()"> Save and Submit </button>-->
 
-        {/* <!--Reset Button--> */}
-        {/* <!--<button name="button" type="reset" class="resetTask" id="resetTask" value="reset" onclick="resetTask()"> Reset Task List </button> --> */}
+  //       {/* <!--Reset Button--> */}
+  //       {/* <!--<button name="button" type="reset" class="resetTask" id="resetTask" value="reset" onclick="resetTask()"> Reset Task List </button> --> */}
         
-    </ul>
-      </div>
-    </div>
+  //   </ul>
+  //     </div>
+  //   </div>
 
-  <script src="script.js"></script>
+  // <script src="script.js"></script>
 //   </body>
 // </html>

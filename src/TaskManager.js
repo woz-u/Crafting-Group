@@ -39,6 +39,8 @@ function TaskManager() {
             onClick={() => setOpenAddModal(true)}>
             Add Project +
           </button>
+          or 
+          <button class="ui button">Open first of 2 Modals</button>
           <div className='taskManager__tasks'>
 
             {tasks.map((task) => (
