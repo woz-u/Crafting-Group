@@ -12,15 +12,13 @@ const About = () => (
     <li>Shopping (future)</li>
     <li>Budget (future)</li>
 </ul>
-    <p>The focus for this project is as follows:</p>
-<ul>
-    <li>Projects</li>
-    <li>Stash (future)</li>
-    <li>Shopping (future)</li>
-    <li>Budget (future)</li>
-</ul>
   </div>
 );
+<div>
+<p> Sue Darby Bio</p>
+<p> Devine Sims Bio</p>
+<p> Stacie Wyatt Bio </p>
+</div>
 
 export default About;
 
