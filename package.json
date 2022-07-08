@@ -3,20 +3,29 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@angular/cli": "^14.0.5",
+    "@angular/upgrade": "^14.0.5",
     "@firebase/util": "^1.6.3",
     "@hapi/hapi": "^20.2.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@vue/cli-upgrade": "^3.12.1",
     "bootstrap": "^5.2.0-beta1",
+    "browser-sync": "^2.27.10",
     "firebase": "^9.8.4",
-    "firebase-tools": "^1.2.0",
+    "firebase-tools": "^11.2.1",
+    "lts": "^1.2.0",
+    "query-string": "^7.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-images-uploading": "^3.1.6",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^2.1.3",
+    "sequelize-auto": "^0.8.8",
     "serialize-javascript": "^6.0.0",
+    "swagger-ui": "^4.12.0",
+    "swagger-ui-react": "^4.12.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -49,6 +58,7 @@
     "@typescript-eslint/parser": "^5.30.5",
     "babel-plugin-react-require": "^3.1.3",
     "eslint": "^8.19.0",
-    "eslint-plugin-react": "^7.30.1"
+    "eslint-plugin-react": "^7.30.1",
+    "jshint": "^2.13.4"
   }
 }
