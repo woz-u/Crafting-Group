@@ -10,40 +10,31 @@
 
 <body>
   <!-- Naviagtion Bootstrap -->
-  <p>
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample"
-      aria-expanded="true" aria-controls="collapseWidthExample">
-      Menu Options
-    </button>
-  
-  <div style="min-height: 120px;">
-    <div class="collapse-horizontal collapse show" id="collapseWidthExample">
-      <div class="card card-body" style="width: 300px;">
-        <!-- Drop down list -->
-        <!-- Home Button -->
-        <a href="home.html" class="list-group-item list-group-item-action">
-          Home
-        </a>
-  
-        <!-- Dashboard Button-->
-        <a href="content\dashboard.html" class="list-group-item list-group-item-action">
-          Dashboard
-        </a>
-  
-        <!--Orders Button-->
-        <a href="Shopping List\index.html" class="list-group-item list-group-item-action">
-          Orders
-        </a>
-  
-        <!-- Project Ideas -->
-        <a href="content\project.html" class="list-group-item list-group-item-action">
-          Projects
-        </a>
-        <!-- Dropdown -->
-      </div>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="project.html">Project</a>
+            </li>
+        </ul>
+        <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        </div>
     </div>
-  </div>
-  </p>
+</nav>
   <!--- End of Navigation -->
 
   <!-- Bootstrap CSS -->
